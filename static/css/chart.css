@@ -1,0 +1,58 @@
+.dropdows-part {
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.top-buttons-row {
+    margin-bottom: 10px;
+}
+
+.top-buttons-row button {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.center-buttons {
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-image: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background: #eee !important;
+    color: #4e4e4e;
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid #eeeeee;
+}
+
+.center-buttons-div {
+    padding: 0;
+}
+
+.center-button-disabled {
+    background: #848180 !important;
+    color: #eeeeee;
+    padding: 30px 5px;
+    font-size: 30px;
+}
+
+.right-info div {
+    height: 33%;
+    width: 100%;
+}
+
+.right-info div h4 {
+    margin-top: 40px;
+}
+
+.info-col {
+    padding: 23px;
+    background-color: #eee;
+    margin-left: 15px;
+    width: 7%;
+    text-align: center;
+    margin-top: 17px;
+
+}
