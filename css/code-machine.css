@@ -1,0 +1,20 @@
+
+
+
+.hr-divider-test {
+    background: url(../img/slide-bg-test.png) no-repeat bottom center;
+    width: 1170px;
+    height: 100px;
+    margin-bottom: 50px;
+    display: block;
+    clear: both;
+}
+
+.hr-divider-test2 {
+    background: url(../img/slide-bg-test2.png) no-repeat bottom center;
+    width: 1170px;
+    height: 100px;
+    margin-bottom: 50px;
+    display: block;
+    clear: both;
+}
