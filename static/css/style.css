@@ -660,7 +660,6 @@ img {
 .c-logo-part{
 	background: url(../img/poligan_bg.jpg) no-repeat left top;
 	padding: 60px 0;
-	margin-top: 60px;
     filter: alpha(opacity=60);
 }
 .c-logo-part ul{
