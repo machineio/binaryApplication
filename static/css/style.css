@@ -1045,7 +1045,7 @@ img {
 	width:175px;
 	height:50px;
 	letter-spacing: 0px;
-	background:#7cc576;
+	background:#587d38;
 	border-radius:3px;
 	color:#ffffff;
 	font-size:16px;
@@ -1069,20 +1069,20 @@ img {
 }
 
 .footer_bottom{
-	border-top:1px solid #333333;
+	border-top:1px solid #f5f4f4;
 	padding:40px 0;
 	}
 	
 .footer_bottom span{
 	display:block;
 	font-size:14px;
-	color:#cccccc;
+	color:#f5f4f4;
 	text-align:center;
 	}
 	
 .footer_bottom span a{
 	display:inline-block;
-	color:#7cc576;
+	color:#587d38;
 	font-size:16px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
