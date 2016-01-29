@@ -93,7 +93,7 @@ body {
 }
 h2{
 	font-size:38px;
-	color:#222222;
+	color:#777777;
 	font-family:'Dosis';
 	font-weight:700;
 	margin:35px 0 25px 0;
@@ -175,7 +175,7 @@ p{
 .nav ul li a{
 	display:block;
 	font-size:14px;
-	color:#222222;
+	color:#777777;
 	font-family:'Dosis';
 	text-decoration:none;
 	text-transform:uppercase;
@@ -236,7 +236,7 @@ p{
 	
 .top_left_cont h2{
 	font-size:40px;
-	color:#111111;
+	color:#777777;
 	line-height: 52px;
 	margin:0 0 26px 0;
 	font-family:'Dosis';
@@ -345,7 +345,7 @@ a.learn_more2:hover{
 	font-family: 'Dosis';
 	font-weight: 600;
 	font-size:18px;
-	color:#111111;
+	color:#777777;
 	margin:35px 0 18px;
 	}
 	
@@ -659,7 +659,7 @@ img {
 
 .c-logo-part{
 	background: url(../img/poligan_bg.jpg) no-repeat left top;
-	padding: 60px 0;
+	padding: 84px 0;
     filter: alpha(opacity=60);
 }
 .c-logo-part ul{
