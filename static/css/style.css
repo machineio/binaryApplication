@@ -125,7 +125,7 @@ p{
 ---------------------------------*/
 
 #header_outer{
-	background:#f5f4f4;
+	background:#232323;
 	padding:30px 0px;
 	}
 
@@ -150,6 +150,8 @@ p{
 .nav ul{
 	list-style:none;
 	padding:0px;
+	margin-top: 19px;
+
 	}
 .nav ul.toggle{
 	display:none;
@@ -175,7 +177,7 @@ p{
 .nav ul li a{
 	display:block;
 	font-size:14px;
-	color:#777777;
+	color:#f1f0f0;
 	font-family:'Dosis';
 	text-decoration:none;
 	text-transform:uppercase;
@@ -188,6 +190,7 @@ p{
 	color:#49b5e7;
 	}
 	
+
 
 	
 
