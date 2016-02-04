@@ -35,11 +35,25 @@
 
 <link rel="stylesheet" href="./static/css/chart.css">
 
-<!-- end of test with Ulisnky- ->
+<link rel="stylesheet" href="./static/css/jquery.countdown.css">
+
+<!-- end of test with Ulisnky- !-->
 
 
 </head>
 <body>
+
+    <!-- The prefix "fun" stands for "Fantastically Unbelievable Nonsense"-->
+    <!-- navbar -->
+    <div id="fun-navbar"></div>
+    <!-- subheader -->
+    <div id="fun-subheader"></div>
+    <!-- landing -->
+    <div id="fun-landing"></div>
+    <!-- features -->
+    <div id="fun-features"></div>
+    <!-- enterprise -->
+    <div id="fun-enterprise"></div>
 
 <!--Header_section-->
 <header id="header_outer">
@@ -660,12 +674,30 @@ $( window ).load(function() {
 	return false;
 });
 </script>
-<!-- jQuery 2.1.4 -->
+
+    <!-- jQuery 2.1.4 -->
     <script src="./static/js/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="./static/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="./static/js/plugins/fastclick/fastclick.min.js"></script>
+    <script src="/static/js/libs/core-min.js"></script>
+
+    <script src="/static/js/libs/enc-base64-min.js"></script>
+    <script src="/static/js/libs/underscore-min.js"></script>
+    <script src="/static/js/libs/backbone-min.js"></script>
+    <script src="/static/js/libs/moment.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/static/js/libs/bootstrap.min.js"></script>
+    <script src="/static/js/libs/bootstrap-datepicker.js"></script>
+    <script src="/static/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <!-- Custom plugins -->
+    <!-- bootstrap enhancement -->
+    <script type="text/javascript" src="/static/js/plugins/calendar.js"></script>
+    
+    <script src="/static/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="/static/js/plugins/cookie/jquery.cookie.js"></script>
+    
+    <script src="/static/js/plugins/timezone/date.js"></script>
+    
+    <script src="/static/js/plugins/countdown/jquery.countdown.min.js"></script>
+
     <!-- AdminLTE App -->
     <script src="./static/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
@@ -678,6 +710,11 @@ $( window ).load(function() {
     <script src="./static/js/plugins/flot/jquery.flot.pie.min.js"></script>
     <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
     <script src="./static/js/plugins/flot/jquery.flot.categories.min.js"></script>
+
+    <script src="/static/js/seed/fun.utils.js"></script>
+    <script src="/static/js/seed/fun.configuration.js"></script>
+    <script src="/static/js/seed/fun.strings.js"></script>
+    <script src="/static/js/seed/fun.models.js"></script>
     <!-- Page script -->
     <script>
       $(function () {
