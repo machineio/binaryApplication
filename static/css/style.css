@@ -125,7 +125,7 @@ p{
 ---------------------------------*/
 
 #header_outer{
-	background:#f5f4f4;
+	background:#232323;
 	padding:30px 0px;
 	}
 
@@ -150,6 +150,8 @@ p{
 .nav ul{
 	list-style:none;
 	padding:0px;
+	margin-top: 19px;
+
 	}
 .nav ul.toggle{
 	display:none;
@@ -175,7 +177,7 @@ p{
 .nav ul li a{
 	display:block;
 	font-size:14px;
-	color:#777777;
+	color:#f1f0f0;
 	font-family:'Dosis';
 	text-decoration:none;
 	text-transform:uppercase;
@@ -185,9 +187,10 @@ p{
 	-webkit-transition:all 0.2s ease-in-out;	
 	}
 .nav ul li a:hover{
-	color:#49b5e7;
+	color:#43843e;
 	}
 	
+
 
 	
 
@@ -261,7 +264,6 @@ a.learn_more2{
 	width:178px;
 	height:46px;
 	line-height:46px;
-	border-radius:3px;
 	text-align:center;
 	font-family:''Dosis'';
 	text-transform:uppercase;
@@ -303,7 +305,7 @@ a.learn_more2:hover{
 	}
 	
 .service_icon{
-	border:2px solid #f56eab;
+	border:2px solid #c52127;
 	border-radius:50%;
 	width:90px;
 	height:90px;
@@ -311,15 +313,15 @@ a.learn_more2:hover{
 	}
 	
 .service_icon.icon2{
-	border:2px solid #7cc576;
+	border:2px solid #c52127;
 	}
 	
 .service_icon.icon3{
-	border:2px solid #49b5e7;
+	border:2px solid #c52127;
 	}
 	
 .service_icon span {
-    background:#f56eab;
+    background:#c52127;
     border: 3px solid #fff;
     border-radius: 50%;
     display: block;
@@ -327,10 +329,10 @@ a.learn_more2:hover{
     width: 100%;
 }
 .service_icon.icon2 span {
-    background:#7cc576;
+    background:#c52127;
 }
 .service_icon.icon3 span{
-    background:#49b5e7;
+    background:#c52127;
 	}
 .service_icon i{
 	color: #fff;
