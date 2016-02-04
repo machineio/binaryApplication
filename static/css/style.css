@@ -305,7 +305,7 @@ a.learn_more2:hover{
 	}
 	
 .service_icon{
-	border:2px solid #c52127;
+	border:2px solid #232323;
 	border-radius:50%;
 	width:90px;
 	height:90px;
@@ -321,7 +321,7 @@ a.learn_more2:hover{
 	}
 	
 .service_icon span {
-    background:#c52127;
+    background:#232323;
     border: 3px solid #fff;
     border-radius: 50%;
     display: block;
