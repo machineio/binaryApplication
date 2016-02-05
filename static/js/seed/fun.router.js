@@ -120,7 +120,7 @@ fun.Router = Backbone.Router.extend({
         fun.instances.tasks = new fun.views.tasks({
             el:"#fun-tasks"
         });
-        
+
         // contacts
         fun.instances.contacts = new fun.views.contacts({
             el:"#fun-contacts"
@@ -183,6 +183,7 @@ fun.Router = Backbone.Router.extend({
     landing: function(){
         'use strict';
         fun.utils.hideAll();
+        fun.utils.showLanding();
         fun.instances.navbar.render();
         fun.instances.landing.render();
         fun.instances.extra.render();
@@ -662,12 +663,7 @@ fun.Router = Backbone.Router.extend({
                 fun.instances.dashboard.renderLatestRecords(
                     models.records
                 );
-
-                fun.instances.dashboard.renderTodayActivityChart(
-                    models.lapseSummary
-                );
-
-                // need to pass stuff to renderRecordType()                   
+                  
                 fun.instances.dashboard.renderRecordType();
 
                 // set profile info
