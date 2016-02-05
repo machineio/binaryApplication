@@ -31,10 +31,6 @@ fun.Router = Backbone.Router.extend({
         "contacts/p:page": "contacts",
         "tasks": "tasks",
         "tasks/p:page": "tasks",
-        "companies": "companies",
-        "companies/p:page": "companies",
-        "campaigns": "campaigns",
-        "cubes": "cubes",
         "orgs": "orgs",
         "activity": "activity",
         "profile": "profile",
@@ -124,14 +120,7 @@ fun.Router = Backbone.Router.extend({
         fun.instances.tasks = new fun.views.tasks({
             el:"#fun-tasks"
         });
-        // companies
-        fun.instances.companies = new fun.views.companies({
-            el:"#fun-companies"
-        });
-        // campaigns
-        fun.instances.campaigns = new fun.views.campaigns({
-            el:"#fun-campaigns"
-        });
+        
         // contacts
         fun.instances.contacts = new fun.views.contacts({
             el:"#fun-contacts"
