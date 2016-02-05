@@ -678,6 +678,7 @@ fun.Router = Backbone.Router.extend({
             dashboard = translate('dashboard');
 
             fun.utils.hideAll();
+            fun.utils.hideLanding();
             fun.instances.navbar.render();
 
             fun.instances.subheader.render(dashboard);
