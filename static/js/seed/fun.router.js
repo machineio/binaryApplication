@@ -597,11 +597,12 @@ fun.Router = Backbone.Router.extend({
 
     login: function(){
         'use strict';
-        var login = translate('signIn');
+        var login = translate('login');
         if(fun.utils.loggedIn()){
             fun.utils.redirect(fun.conf.hash.dashboard);
         } else {
             fun.utils.hideAll();
+            fun.utils.hideLanding();
             fun.instances.navbar.render();
             fun.instances.subheader.render(login);
             fun.instances.login.render();
@@ -718,6 +719,7 @@ fun.Router = Backbone.Router.extend({
         var profile = translate('profile');
 
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.navbar.renderDropdown();
         fun.instances.subheader.render(profile);
@@ -732,6 +734,7 @@ fun.Router = Backbone.Router.extend({
         if(fun.utils.loggedIn()){
             var reports = translate('reports');
             fun.utils.hideAll();
+            fun.utils.hideLanding();
             fun.instances.navbar.render();
             fun.instances.navbar.renderDropdown();
             fun.instances.subheader.render(reports);
@@ -750,6 +753,7 @@ fun.Router = Backbone.Router.extend({
         this.account = localStorage.getItem("username");
         var settings = translate('settings');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.navbar.renderDropdown();
         fun.instances.subheader.render(settings);
@@ -770,6 +774,7 @@ fun.Router = Backbone.Router.extend({
         };
 
         fun.utils.hideAll();
+        fun.utils.hideLanding();
 
         fun.utils.logout({
             success: function() {
