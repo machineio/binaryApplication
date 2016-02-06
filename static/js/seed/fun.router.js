@@ -232,7 +232,7 @@ fun.Router = Backbone.Router.extend({
 
     messages: function(){
         'use strict';
-        var terms = translate('messages');
+        var messages = translate('messages');
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(messages);
