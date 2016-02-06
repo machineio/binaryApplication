@@ -12,6 +12,7 @@ fun.strings = {
     hotAssets: "Hot Assets",
     currencies: "Currencies",
     stocks: "Stocks",
+    binaryOptions: "Binary Options",
     telephone: "Telephone",
     dba: "DBA",
     timeout: "Time out",

@@ -716,7 +716,7 @@ fun.Router = Backbone.Router.extend({
 
     profile: function(){
         'use strict';
-        var profile = translate('profile');
+        var profile = translate('binaryOptions');
 
         fun.utils.hideAll();
         fun.utils.hideLanding();
