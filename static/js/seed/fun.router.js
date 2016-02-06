@@ -230,6 +230,16 @@ fun.Router = Backbone.Router.extend({
         fun.instances.footer.render();
     },
 
+    messages: function(){
+        'use strict';
+        var terms = translate('messages');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(messages);
+        fun.instances.messages.render();
+        fun.instances.footer.render();
+    },
+
     tasks: function(){
         'use strict';
         var tasks = translate('tasks'),
