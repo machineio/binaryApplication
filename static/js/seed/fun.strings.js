@@ -31,6 +31,7 @@ fun.strings = {
     serviceLevel: "Service Level",
     timeOut: "Time Out",
     joinempty: "Join empty",
+    trades: "Trades",
     ringinuse: "Ring in use",
     countryCompany: "Country Company",
     customerSupportSystem: "Customer Support System",
