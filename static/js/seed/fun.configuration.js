@@ -376,6 +376,10 @@ fun.conf.templates = {
 
 /*
  Hash tags for backbone.js router
+
+ or
+
+ Where the fuck are we using this shit up?
 */
 fun.conf.hash = {
     home: '#home',
