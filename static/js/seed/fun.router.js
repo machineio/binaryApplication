@@ -286,6 +286,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var about = translate('about');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(about);
         fun.instances.about.render();
@@ -296,6 +297,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var binary = translate('binary');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(binary);
         fun.instances.binary.render();
@@ -306,6 +308,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var education = translate('education');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(education);
         fun.instances.education.render();
