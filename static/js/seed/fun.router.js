@@ -260,6 +260,16 @@ fun.Router = Backbone.Router.extend({
         fun.instances.footer.render();
     },
 
+    education: function(){
+        'use strict';
+        var education = translate('education');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(education);
+        fun.instances.terms.render();
+        fun.instances.footer.render();
+    },
+
     messages: function(){
         'use strict';
         var messages = translate('messages');
