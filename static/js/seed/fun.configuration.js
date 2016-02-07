@@ -12,30 +12,24 @@ fun.conf = {
     html: '/static/html',
 
     // internet domain
-    domain: 'iofun.io',
+    domain: 'binarymachine.io',
 
     // seed url root
     urlRoot: '/api/',
 
     // system uuid's
     uuidRecord: 'record_uuid',
-    uuidRecording: 'recording_uuid',
     uuidBilling: 'billing_uuid',
-    uuidCampaign: 'campaign_uuid',
     uuidCalendar: 'calendar_uuid',
     uuidMonitor: 'monitor_uuid',
     uuidAddress: 'address_uuid',
     uuidAlert: 'alert_uuid',
     uuidContact: 'contact_uuid',
-    uuidDaemon: 'daemon_uuid',
-    uuidNode: 'node_uuid',
-    uuidCube: 'cube_uuid',
     uuidTask: 'task_uuid',
     uuidCompany: 'company_uuid',
     uuidDirectory: 'directory_uuid',
     uuidPricing: 'pricing_uuid',
-    uuidSound: 'sound_uuid',
-    uuidGateway: 'gateway_uuid',
+    
     uuidAccount: 'account_uuid',
     uuidResource: 'resource_uuid',
     uuidMessage: 'message_uuid',
@@ -58,62 +52,12 @@ fun.conf = {
 };
 
 /*
- Configuration daemons
-*/
-fun.conf.daemons = {
-    ws_port: '10080',
-    stun_port: '19302',
-    turn_port: '3478',
-    overlord_port: '8899',
-    ws_server: 'ws://' + fun.conf.domain,
-    stun_server: 'stun.' + fun.conf.domain,
-    turn_server: 'turn.' + fun.conf.domain,
-    coturn_server: 'coturn.' + fun.conf.domain,
-    ice_server: 'ice.' + fun.conf.domain,
-    overlord_server: 'overlord.' + fun.conf.domain,
-    sip_server: 'sip.' + fun.conf.domain
-};
-
-/*
  Common timeouts, compare this with overlord protocol
 */
 fun.conf.timeouts = {
     big: 8000,
     medium: 5000,
     small: 3000
-};
-
-/*
- Current SIP client configuration
-*/
-fun.conf.sip = {
-    // sip and ws servers
-    registrar_server: fun.conf.daemons.sip_server,
-    ws_servers: fun.utils.format('%s%s', fun.conf.daemons.ws_server, fun.conf.daemons.ws_port),
-    // ice ice baby
-    stun_servers: fun.utils.format('%s:%s', fun.conf.daemons.stun_server, fun.conf.daemons.stun_port),
-    turn_servers: fun.utils.format('%s:%s', fun.conf.daemons.turn_server, fun.conf.daemons.turn_port),
-    // register this sip account
-    register: true,
-    register_expires: '480',
-    // connection recovery intervals
-    connection_recovery_min_interval: '3',
-    connection_recovery_max_interval: '8',
-    // sip server uri
-    uri: fun.utils.format('sip:%s@%s', fun.conf.account, fun.conf.domain),
-    // get username account or first name, last name if set.
-    display_name: 'Cebus Capuchin',
-    authorization_user: '',
-    password: '',
-    no_answer_timeout: '60',
-    // trace sip traffic
-    trace_sip: false,
-    // use pre loaded route
-    use_preloaded_route: false,
-    
-    // #TODO: is this still relevant?
-    hack_via_tcp: true,
-    hacK_ip_in_contact: false
 };
 
 /*
@@ -160,10 +104,6 @@ fun.conf.urls = {
     billingsRecordsStartEnd: fun.utils.format('/billings/records/start/%s/end/%s', fun.conf.startTime, fun.conf.endTime),
     contact: fun.utils.format('/contacts/%s', fun.conf.uuidContact),
     contacts: '/contacts/',
-    cube: fun.utils.format('/cubes/%s', fun.conf.uuidCube),
-    cubes: '/cubes/',
-    daemon: fun.utils.format('/daemons/%s', fun.conf.uuidDaemon),
-    daemons: '/daemons/',
     task: fun.utils.format('/tasks/%s', fun.conf.uuidTask),
     tasks: '/tasks/',
     tasksDone: '/tasks/done/',
@@ -194,13 +134,6 @@ fun.conf.urls = {
     campaigns: '/campaigns/',
     alert: fun.utils.format('/alerts/%s', fun.conf.uuidAlert),
     alerts: '/alerts/',
-    gateway: fun.utils.format('/gateways/%s', fun.conf.uuidGateway),
-    gateways: '/gateways/',
-    gatewaysActive: '/gateways/active/',
-    gatewaysDisable: '/gateways/disable/',
-    gatewaysInbound: '/gateways/inbound/',
-    gatewaysOutbound: '/gateways/outbound/',
-    gatewaysMonitored: '/gateways/monitored/',
     message: fun.utils.format('/messages/%s', fun.conf.uuidMessage),
     messages: '/messages/',
     messagesUnread: '/messages/unread/',
@@ -231,13 +164,11 @@ fun.conf.templates = {
     headNavProfile: fun.utils.format('%s/headNavProfile.html', fun.conf.html),
     landing: fun.utils.format('%s/landing.html', fun.conf.html),
     education: fun.utils.format('%s/education.html', fun.conf.html),
-
     assets: fun.utils.format('%s/assets.html', fun.conf.html),
     currencies: fun.utils.format('%s/currencies.html', fun.conf.html),
     stocks: fun.utils.format('%s/stocks.html', fun.conf.html),
     deposit: fun.utils.format('%s/deposit.html', fun.conf.html),
     withdraw: fun.utils.format('%s/withdraw.html', fun.conf.html),
-
     features: fun.utils.format('%s/features.html', fun.conf.html),
     calendars: fun.utils.format('%s/calendars.html', fun.conf.html),
     monitors: fun.utils.format('%s/monitors.html', fun.conf.html),
@@ -260,15 +191,6 @@ fun.conf.templates = {
     allRecordings: fun.utils.format('%s/allRecordings.html', fun.conf.html),
     recordingRow: fun.utils.format('%s/recordingRow.html', fun.conf.html),
     recordingListItem: fun.utils.format('%s/recordingListItem.html', fun.conf.html),
-    gateways: fun.utils.format('%s/gateways.html', fun.conf.html),
-    gatewaysAllTab: fun.utils.format('%s/gatewaysAllTab.html', fun.conf.html),
-    gatewaysActiveTab: fun.utils.format('%s/gatewaysActiveTab.html', fun.conf.html),
-    gatewaysMonitoredTab: fun.utils.format('%s/gatewaysMonitoredTab.html', fun.conf.html),
-    gatewaysInboundTab: fun.utils.format('%s/gatewaysInboundTab.html', fun.conf.html),
-    gatewaysOutboundTab: fun.utils.format('%s/gatewaysOutboundTab.html', fun.conf.html),
-    allGateways: fun.utils.format('%s/allGateways.html', fun.conf.html),
-    gatewayRow: fun.utils.format('%s/gatewayRow.html', fun.conf.html),
-    gatewayListItem: fun.utils.format('%s/gatewayListItem.html', fun.conf.html),
     accounts: fun.utils.format('%s/accounts.html', fun.conf.html),
     accountsAllTab: fun.utils.format('%s/accountsAllTab.html', fun.conf.html),
     accountsActiveTab: fun.utils.format('%s/accountsActiveTab.html', fun.conf.html),
@@ -299,19 +221,7 @@ fun.conf.templates = {
     login: fun.utils.format('%s/login.html', fun.conf.html),
     dashboard: fun.utils.format('%s/dashboard.html', fun.conf.html),
     orgs: fun.utils.format('%s/orgs.html', fun.conf.html),
-    campaigns: fun.utils.format('%s/campaigns.html', fun.conf.html),
-    allCampaigns: fun.utils.format('%s/allCampaigns.html', fun.conf.html),
-    campaignRow: fun.utils.format('%s/campaignRow.html', fun.conf.html),
-    campaignsActiveTab: fun.utils.format('%s/campaignsActiveTab.html', fun.conf.html),
-    campaignsPausedTab: fun.utils.format('%s/campaignsPausedTab.html', fun.conf.html),
-    campaignsInboundTab: fun.utils.format('%s/campaignsInboundTab.html', fun.conf.html),
-    campaignsOutboundTab: fun.utils.format('%s/campaignsOutboundTab.html', fun.conf.html),
-    cubes: fun.utils.format('%s/cubes.html', fun.conf.html),
-    allCubes: fun.utils.format('%s/allCubes.html', fun.conf.html),
-    cubeRow: fun.utils.format('%s/cubeRow.html', fun.conf.html),
     accountListItem: fun.utils.format('%s/accountListItem.html', fun.conf.html),
-    campaignListItem: fun.utils.format('%s/campaignListItem.html', fun.conf.html),
-    cubeListItem: fun.utils.format('%s/cubeListItem.html', fun.conf.html),
     recordRow: fun.utils.format('%s/recordRow.html', fun.conf.html),
     typeRow: fun.utils.format('%s/typeRow.html', fun.conf.html),
     sumRow: fun.utils.format('%s/sumRow.html', fun.conf.html),

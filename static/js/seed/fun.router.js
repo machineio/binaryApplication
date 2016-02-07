@@ -15,13 +15,8 @@ fun.Router = Backbone.Router.extend({
         "dashboard": "dashboard",
         "dashboard/a:account": "dashboard",
         "dashboard/a:account/o:org": "dashboard",
-        "workshop": "workshop",
-        "workspace": "workspace",
         "signup": "signup",
         "login": "login",
-        "features": "features",
-        "enterprise": "enterprise",
-        "pricing": "pricing",
         "terms": "terms",
         "security": "security",
         "privacy": "privacy",
@@ -39,20 +34,17 @@ fun.Router = Backbone.Router.extend({
         "teams": "teams",
         "reports": "reports",
         "reports/p:page": "reports",
-        "phone": "phone",
         "accounts":"accounts",
         "messages": "messages",
         "about": "about",
         "binary": "binary",
         "education": "education",
         "resources": "resources",
-        "recordings": "recordings",
         "assets":"assets",
         "currencies":"currencies",
         "stocks":"stocks",
         "deposit": "deposit",
         "withdraw": "withdraw",
-        "gateways": "gateways",
         "settings": "settings",
         "logout": "logout"
     },
@@ -70,14 +62,6 @@ fun.Router = Backbone.Router.extend({
         // landing
         fun.instances.landing = new fun.views.landing({
             el:"#fun-landing"
-        });
-        // features
-        fun.instances.features = new fun.views.features({
-            el:"#fun-features"
-        });
-        // enterprise
-        fun.instances.enterprise = new fun.views.enterprise({
-            el:"#fun-enterprise"
         });
         // terms
         fun.instances.terms = new fun.views.terms({
@@ -115,7 +99,6 @@ fun.Router = Backbone.Router.extend({
         fun.instances.profile = new fun.views.profile({
             el:"#fun-profile"
         });
-        
         // members
         fun.instances.members = new fun.views.members({
             el:"#fun-members"
@@ -124,47 +107,38 @@ fun.Router = Backbone.Router.extend({
         fun.instances.teams = new fun.views.teams({
             el:"#fun-teams"
         });
-        
         // tasks
         fun.instances.tasks = new fun.views.tasks({
             el:"#fun-tasks"
         });
-
         // contact
         fun.instances.contact = new fun.views.contact({
             el:"#fun-contact"
         });
-
         // contacts
         fun.instances.contacts = new fun.views.contacts({
             el:"#fun-contacts"
         });
-
         // assets
         fun.instances.assets = new fun.views.assets({
             el:"#fun-assets"
         });
-
         // currencies
         fun.instances.currencies = new fun.views.currencies({
             el:"#fun-currencies"
         });
-
         // deposit
         fun.instances.deposit = new fun.views.deposit({
             el:"#fun-deposit"
         });
-
         // stocks
         fun.instances.stocks = new fun.views.stocks({
             el:"#fun-stocks"
         });
-
         // withdraw
         fun.instances.withdraw = new fun.views.withdraw({
             el:"#fun-withdraw"
         });
-
         // accounts
         fun.instances.accounts = new fun.views.accounts({
             el:"#fun-accounts"
@@ -239,36 +213,6 @@ fun.Router = Backbone.Router.extend({
         fun.instances.navbar.render();
         fun.instances.landing.render();
         fun.instances.extra.render();
-        fun.instances.footer.render();
-    },
-
-    features: function(){
-        'use strict';
-        var features = translate('features');
-        fun.utils.hideAll();
-        fun.instances.navbar.render();
-        //fun.instances.subheader.render(features);
-        fun.instances.features.render();
-        fun.instances.footer.render();
-    },
-
-    enterprise: function(){
-        'use strict';
-        var enterprise = translate('enterprise');
-        fun.utils.hideAll();
-        fun.instances.navbar.render();
-        //fun.instances.subheader.render(enterprise);
-        fun.instances.enterprise.render();
-        fun.instances.footer.render();
-    },
-
-    pricing: function(){
-        'use strict';
-        var pricing = translate('pricing');
-        fun.utils.hideAll();
-        fun.instances.navbar.render();
-        //fun.instances.subheader.render(enterprise);
-        fun.instances.pricing.render();
         fun.instances.footer.render();
     },
 
