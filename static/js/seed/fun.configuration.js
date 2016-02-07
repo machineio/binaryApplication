@@ -382,7 +382,7 @@ fun.conf.hash = {
     landing: '#landing',
     features: '#features',
     enterprise: '#enterprise',
-    enterprise: '#calendars',
+    education: '#education',
 
     terms: '#terms',
     privacy: '#privacy',
@@ -414,7 +414,7 @@ fun.conf.hash = {
     phone: '#phone',
     reports: '#reports',
     reportsWithPage: '#reports/p{page}',
-    contact: '#contact',
+    
     contacts: '#contacts',
     cubes: '#cubes',
     contactsWithPage: '#contacts/p{page}',
