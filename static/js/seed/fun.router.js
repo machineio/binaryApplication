@@ -445,7 +445,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(assets);
-        fun.instances.subheader.renderHeadNav();
+        fun.instances.subheader.renderHeadNavProfile();
         fun.instances.assets.render();
         fun.instances.footer.render();
     },
@@ -457,7 +457,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(currencies);
-        fun.instances.subheader.renderHeadNav();
+        fun.instances.subheader.renderHeadNavProfile();
         fun.instances.currencies.render();
         fun.instances.footer.render();
     },
@@ -469,7 +469,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(stocks);
-        fun.instances.subheader.renderHeadNav();
+        fun.instances.subheader.renderHeadNavProfile();
         fun.instances.stocks.render();
         fun.instances.footer.render();
     },
