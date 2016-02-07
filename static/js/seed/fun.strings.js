@@ -15,6 +15,7 @@ fun.strings = {
     win: "Success",
     loss: "Losses",
     tie: "Tied",
+    about: "About",
     forecast: "Forecast",
     binaryOptions: "Binary Options",
     telephone: "Telephone",
