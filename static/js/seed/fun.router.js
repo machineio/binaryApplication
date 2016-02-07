@@ -498,6 +498,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var assets = translate('assets');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(assets);
         fun.instances.assets.render();
@@ -508,6 +509,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var currencies = translate('currencies');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(currencies);
         fun.instances.currencies.render();
@@ -518,6 +520,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var stocks = translate('stocks');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(stocks);
         fun.instances.stocks.render();
@@ -528,6 +531,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var deposit = translate('deposit');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(deposit);
         fun.instances.deposit.render();
@@ -538,6 +542,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var withdraw = translate('withdraw');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(withdraw);
         fun.instances.withdraw.render();
@@ -548,6 +553,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var contact = translate('contact');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         fun.instances.subheader.render(contact);
         fun.instances.contact.render();
