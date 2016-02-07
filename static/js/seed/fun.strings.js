@@ -21,6 +21,7 @@ fun.strings = {
     dba: "DBA",
     timeout: "Time out",
     conquistadorCoffeeCampaign: "Conquistador Coffee Campaign",
+    predictions: "Predictions",
     recordAudio: "Record Audio",
     doNotDisturb: "Do Not Disturb",
     tradeActivity: "Trade Activity",
