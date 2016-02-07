@@ -46,6 +46,11 @@ fun.Router = Backbone.Router.extend({
         "education": "education",
         "resources": "resources",
         "recordings": "recordings",
+        "assets":"assets",
+        "currencies":"currencies",
+        "stocks":"stocks",
+        "deposit": "deposit",
+        "withdraw": "withdraw",
         "gateways": "gateways",
         "settings": "settings",
         "logout": "logout"
@@ -124,10 +129,41 @@ fun.Router = Backbone.Router.extend({
             el:"#fun-tasks"
         });
 
+        // contact
+        fun.instances.contact = new fun.views.contact({
+            el:"#fun-contact"
+        });
+
         // contacts
         fun.instances.contacts = new fun.views.contacts({
             el:"#fun-contacts"
         });
+
+        // assets
+        fun.instances.assets = new fun.views.assets({
+            el:"#fun-assets"
+        });
+
+        // currencies
+        fun.instances.currencies = new fun.views.currencies({
+            el:"#fun-currencies"
+        });
+
+        // deposit
+        fun.instances.deposit = new fun.views.deposit({
+            el:"#fun-deposit"
+        });
+
+        // stocks
+        fun.instances.stocks = new fun.views.stocks({
+            el:"#fun-stocks"
+        });
+
+        // withdraw
+        fun.instances.withdraw = new fun.views.withdraw({
+            el:"#fun-withdraw"
+        });
+
         // accounts
         fun.instances.accounts = new fun.views.accounts({
             el:"#fun-accounts"
@@ -450,6 +486,56 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(security);
+        fun.instances.security.render();
+        fun.instances.footer.render();
+    },
+
+    assets: function(){
+        'use strict';
+        var assets = translate('assets');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(assets);
+        fun.instances.security.render();
+        fun.instances.footer.render();
+    },
+
+    currencies: function(){
+        'use strict';
+        var currencies = translate('currencies');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(currencies);
+        fun.instances.security.render();
+        fun.instances.footer.render();
+    },
+
+    stocks: function(){
+        'use strict';
+        var stocks = translate('stocks');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(stocks);
+        fun.instances.security.render();
+        fun.instances.footer.render();
+    },
+
+    deposit: function(){
+        'use strict';
+        var deposit = translate('deposit');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(deposit);
+        fun.instances.security.render();
+        fun.instances.footer.render();
+    },
+
+    withdraw: function(){
+        'use strict';
+        var withdraw = translate('withdraw');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(withdraw);
         fun.instances.security.render();
         fun.instances.footer.render();
     },
