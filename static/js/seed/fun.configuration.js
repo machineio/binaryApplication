@@ -231,6 +231,13 @@ fun.conf.templates = {
     headNavProfile: fun.utils.format('%s/headNavProfile.html', fun.conf.html),
     landing: fun.utils.format('%s/landing.html', fun.conf.html),
     education: fun.utils.format('%s/education.html', fun.conf.html),
+
+    assets: fun.utils.format('%s/assets.html', fun.conf.html),
+    currencies: fun.utils.format('%s/currencies.html', fun.conf.html),
+    stocks: fun.utils.format('%s/stocks.html', fun.conf.html),
+    deposit: fun.utils.format('%s/deposit.html', fun.conf.html),
+    withdraw: fun.utils.format('%s/withdraw.html', fun.conf.html),
+
     features: fun.utils.format('%s/features.html', fun.conf.html),
     calendars: fun.utils.format('%s/calendars.html', fun.conf.html),
     monitors: fun.utils.format('%s/monitors.html', fun.conf.html),
@@ -384,6 +391,12 @@ fun.conf.hash = {
     help: '#help',
     signup: '#signup',
     login: '#login',
+
+    contact: '#contact',
+    assets: '#assets',
+    stocks: '#stocks',
+    deposit: '#deposit',
+    withdraw: '#withdraw',
 
     accounts: '#accounts',
     messages: '#messages',
