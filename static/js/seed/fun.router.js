@@ -496,7 +496,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(assets);
-        fun.instances.security.render();
+        fun.instances.assets.render();
         fun.instances.footer.render();
     },
 
@@ -506,7 +506,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(currencies);
-        fun.instances.security.render();
+        fun.instances.currencies.render();
         fun.instances.footer.render();
     },
 
@@ -516,7 +516,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(stocks);
-        fun.instances.security.render();
+        fun.instances.stocks.render();
         fun.instances.footer.render();
     },
 
@@ -526,7 +526,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(deposit);
-        fun.instances.security.render();
+        fun.instances.deposit.render();
         fun.instances.footer.render();
     },
 
@@ -536,7 +536,17 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(withdraw);
-        fun.instances.security.render();
+        fun.instances.withdraw.render();
+        fun.instances.footer.render();
+    },
+
+    contact: function(){
+        'use strict';
+        var contact = translate('contact');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(contact);
+        fun.instances.contact.render();
         fun.instances.footer.render();
     },
 
