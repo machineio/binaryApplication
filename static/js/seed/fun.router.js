@@ -812,6 +812,7 @@ fun.Router = Backbone.Router.extend({
         fun.instances.navbar.render();
         fun.instances.navbar.renderDropdown();
         fun.instances.subheader.render(settings);
+        fun.instances.subheader.renderHeadNav();
         fun.instances.settings.render(this.account);
         fun.instances.footer.render();
     },
