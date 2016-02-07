@@ -236,6 +236,8 @@ fun.conf.templates = {
     enterprise: fun.utils.format('%s/enterprise.html', fun.conf.html),
     pricing: fun.utils.format('%s/pricing.html', fun.conf.html),
     status: fun.utils.format('%s/status.html', fun.conf.html),
+    about: fun.utils.format('%s/about.html', fun.conf.html),
+    binary: fun.utils.format('%s/binary.html', fun.conf.html),
     tasks: fun.utils.format('%s/tasks.html', fun.conf.html),
     allTasks: fun.utils.format('%s/allTasks.html', fun.conf.html),
     taskRow: fun.utils.format('%s/taskRow.html', fun.conf.html),

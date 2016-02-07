@@ -41,6 +41,8 @@ fun.Router = Backbone.Router.extend({
         "phone": "phone",
         "accounts":"accounts",
         "messages": "messages",
+        "about": "about",
+        "binary": "binary",
         "resources": "resources",
         "recordings": "recordings",
         "gateways": "gateways",
@@ -137,6 +139,14 @@ fun.Router = Backbone.Router.extend({
         fun.instances.messages = new fun.views.messages({
             el:"#fun-messages"
         });
+        // about
+        fun.instances.about = new fun.views.about({
+            el:"#fun-about"
+        });
+        // binary
+        fun.instances.binary = new fun.views.binary({
+            el:"#fun-binary"
+        });
         // reports
         fun.instances.reports = new fun.views.reports({
             el:"#fun-reports"
@@ -226,6 +236,26 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(terms);
+        fun.instances.terms.render();
+        fun.instances.footer.render();
+    },
+
+    about: function(){
+        'use strict';
+        var about = translate('about');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(about);
+        fun.instances.terms.render();
+        fun.instances.footer.render();
+    },
+
+    binary: function(){
+        'use strict';
+        var terms = translate('binary');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(binary);
         fun.instances.terms.render();
         fun.instances.footer.render();
     },
