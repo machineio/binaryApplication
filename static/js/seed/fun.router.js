@@ -43,6 +43,7 @@ fun.Router = Backbone.Router.extend({
         "messages": "messages",
         "about": "about",
         "binary": "binary",
+        "education": "education",
         "resources": "resources",
         "recordings": "recordings",
         "gateways": "gateways",
@@ -146,6 +147,10 @@ fun.Router = Backbone.Router.extend({
         // binary
         fun.instances.binary = new fun.views.binary({
             el:"#fun-binary"
+        });
+        // education
+        fun.instances.education = new fun.views.education({
+            el:"#fun-education"
         });
         // reports
         fun.instances.reports = new fun.views.reports({
