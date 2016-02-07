@@ -92,7 +92,7 @@ fun.views.landing = Backbone.View.extend({
                             // the success stuff is going on case 200 of the error function.
                             // Why? well... I really don't fucking know...
 
-                            fun.utils.redirect(fun.conf.hash.dashboard);
+                            fun.utils.redirect(fun.conf.hash.profile);
                         },
                         error : function(xhr, status, error){
 

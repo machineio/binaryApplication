@@ -640,7 +640,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var signup = translate('signup');
         if(fun.utils.loggedIn()){
-            fun.utils.redirect(fun.conf.hash.dashboard);
+            fun.utils.redirect(fun.conf.hash.profile);
         } else {
             fun.utils.hideAll();
             fun.instances.navbar.render();

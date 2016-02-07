@@ -55,7 +55,7 @@ fun.views.login = Backbone.View.extend({
             view.$('#username').val('');
             view.$('#password').val('');
             loginError.removeClass("show" ).addClass("hide");
-            fun.utils.redirect(fun.conf.hash.dashboard);
+            fun.utils.redirect(fun.conf.hash.profile);
         };
         
         fun.utils.login(username, password, {
