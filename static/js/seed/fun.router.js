@@ -252,7 +252,7 @@ fun.Router = Backbone.Router.extend({
 
     binary: function(){
         'use strict';
-        var terms = translate('binary');
+        var binary = translate('binary');
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(binary);
