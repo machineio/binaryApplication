@@ -27,6 +27,7 @@ fun.Router = Backbone.Router.extend({
         "privacy": "privacy",
         "status": "status",
         "help": "help",
+        "contact": "contact",
         "contacts": "contacts",
         "contacts/p:page": "contacts",
         "tasks": "tasks",
