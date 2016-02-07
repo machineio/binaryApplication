@@ -288,7 +288,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(about);
-        fun.instances.terms.render();
+        fun.instances.about.render();
         fun.instances.footer.render();
     },
 
@@ -298,7 +298,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(binary);
-        fun.instances.terms.render();
+        fun.instances.binary.render();
         fun.instances.footer.render();
     },
 
@@ -308,7 +308,7 @@ fun.Router = Backbone.Router.extend({
         fun.utils.hideAll();
         fun.instances.navbar.render();
         fun.instances.subheader.render(education);
-        fun.instances.terms.render();
+        fun.instances.education.render();
         fun.instances.footer.render();
     },
 
