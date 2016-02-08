@@ -19,7 +19,7 @@ fun.strings = {
     forecast: "Forecast",
     binaryOptions: "Binary Options",
     telephone: "Telephone",
-    binary: "Binary Machine",
+    binary: "Binary Options",
     dba: "DBA",
     timeout: "Time out",
     conquistadorCoffeeCampaign: "Conquistador Coffee Campaign",
