@@ -437,7 +437,7 @@
           }
         });
 
-        var interactive_plot_1 = $.plot("#interactive_1", [getRandomData()], {
+        /*var interactive_plot_1 = $.plot("#interactive_1", [getRandomData()], {
           grid: {
             borderColor: "#f3f3f3",
             borderWidth: 1,
@@ -507,7 +507,7 @@
           xaxis: {
             show: true
           }
-        });
+        });*/
 
         var updateInterval = 500; //Fetch data ever x milliseconds
         var realtime = "on"; //If == to on then fetch data every x seconds. else stop fetching
@@ -523,19 +523,19 @@
           interactive_plot_0.draw();
 
 
-          interactive_plot_1.setData([getRandomData()]);
+          /*interactive_plot_1.setData([getRandomData()]);
           // Since the axes don't change, we don't need to call plot.setupGrid()
-          interactive_plot_1.draw();
+          interactive_plot_1.draw();*/
 
 
-          interactive_plot_2.setData([getRandomData()]);
+          /*interactive_plot_2.setData([getRandomData()]);
           // Since the axes don't change, we don't need to call plot.setupGrid()
           interactive_plot_2.draw();
 
 
           interactive_plot_3.setData([getRandomData()]);
           // Since the axes don't change, we don't need to call plot.setupGrid()
-          interactive_plot_3.draw();
+          interactive_plot_3.draw();*/
 
           if (realtime === "on")
             setTimeout(update, updateInterval);
