@@ -2,76 +2,54 @@
 <div class="jumbotron top_cont_inner">
     <div class="container">
 
-
-
-    <div class="row">
-            
-        <!-- <div class="col-md-8">
-            <h1><%= translate("ioFunBanner") %></h1>
-
-            <div class="landing-text">
-                <h4>
-                    <%= translate("ioFunLandingText") %>
-                </h4>
-
-                <p class="landing-actions">
-                    <a href="#login" class="btn btn-large"><%= translate("getStarted") %></a>
-                    <a href="#enterprise" class="btn btn-large"><%= translate("needEnterpriseResources") %>?</a>
-                </p>
-            </div>
-                      
-        </div> -->
-
-        <!--Top_content-->
-        <section>
-          
-            <div class="container"> 
+        <div class="row">
+                
+            <section>
               
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="top_left_cont flipInY wow animated">
-                          
-                          <h2>Today’s best binary options trading platform</h2>
+                <div class="container"> 
+                  
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="top_left_cont flipInY wow animated">
+                              
+                              <h2>Today’s best binary options trading platform</h2>
 
-                          <p> Binary Machine is the leading binary options platform in the world, developed not only to be as simple and user friendly as possible, 
-            but to also generate significant returns</p>
-                          <a href="#service" class="learn_more2">Learn more</a> 
+                              <p> Binary Machine is the leading binary options platform in the world, developed not only to be as simple and user friendly as possible, 
+                but to also generate significant returns</p>
+                              <a href="#service" class="learn_more2">Learn more</a> 
+                            </div>
                         </div>
+
+                        <div class="col-md-4" style="margin-left: 279px; margin-top: 127px;">    
+                            <form id="langing-signup-form" class="form-signup" novalidate="novalidate">
+                
+                                <div class="form-group">
+                                    <input type="text" id="landing_username" name="landing_username" class="form-control" placeholder="<%= translate("yourUsername") %>" autofocus="">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="landing_email" name="landing_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="landing_password" name="landing_password" placeholder="<%= translate("createApassword") %>"/>
+                                    <p class="text-muted"><%= translate("passwordStuffs") %><p>
+                                </div>
+                                <!-- primary btn class -->
+                                <button id="landing-signup-btn" class="btn btn-lg btn-block" type="submit"><%= translate("signUp") %></button>
+                                <!--
+                                <p class="text-muted"><%= translate("clickYouAgree") %> <a href="#terms"><%= translate("termsOfService") %></a> <%= translate("and") %> <a href="#privacy"><%= translate("privacyPolicy") %></a>. <%= translate("willSendRelatedEmails") %>.</p> -->
+                            </form>
+                        </div>
+
                     </div>
-
-                    <div class="col-md-4" style="margin-left: 279px; margin-top: 127px;">    
-                        <form id="langing-signup-form" class="form-signup" novalidate="novalidate">
-            
-                            <div class="form-group">
-                                <input type="text" id="landing_username" name="landing_username" class="form-control" placeholder="<%= translate("yourUsername") %>" autofocus="">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" id="landing_email" name="landing_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="landing_password" name="landing_password" placeholder="<%= translate("createApassword") %>"/>
-                                <p class="text-muted"><%= translate("passwordStuffs") %><p>
-                            </div>
-                            <!-- primary btn class -->
-                            <button id="landing-signup-btn" class="btn btn-lg btn-block" type="submit"><%= translate("signUp") %></button>
-                            <!--
-                            <p class="text-muted"><%= translate("clickYouAgree") %> <a href="#terms"><%= translate("termsOfService") %></a> <%= translate("and") %> <a href="#privacy"><%= translate("privacyPolicy") %></a>. <%= translate("willSendRelatedEmails") %>.</p> -->
-                        </form>
-                    </div>
-
                 </div>
-            </div>
-
+              
+            </section>
             
-          
-        </section>
-        <!--Top_content-->
-        
-    </div>
+        </div>
 
-</div>
+    </div>
 </div>
 
 
