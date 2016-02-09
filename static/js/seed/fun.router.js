@@ -691,13 +691,13 @@ fun.Router = Backbone.Router.extend({
 
     signup: function(){
         'use strict';
-        var signup = translate('signup');
+        var signup = translate('signUp');
         if(fun.utils.loggedIn()){
             fun.utils.redirect(fun.conf.hash.profile);
         } else {
             fun.utils.hideAll();
             fun.instances.navbar.render();
-            fun.instances.subheader.render('Signup');
+            fun.instances.subheader.render(signup);
             fun.instances.signup.render();
         }
         fun.instances.footer.render();
