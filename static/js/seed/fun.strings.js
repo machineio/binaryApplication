@@ -17,6 +17,7 @@ fun.strings = {
     developers: "Developers",
     companyName: "Company Name",
     hotAssets: "Hot Assets",
+    assets: "Assets",
     currencies: "Currencies",
     stocks: "Stocks",
     win: "Success",
