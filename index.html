@@ -412,14 +412,131 @@
           }
         });
 
+
+        var interactive_plot_0 = $.plot("#interactive_0", [getRandomData()], {
+          grid: {
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0, // Drawing is faster without shadows
+            color: "#3c8dbc"
+          },
+          lines: {
+            fill: true, //Converts the line chart to area chart
+            color: "#3c8dbc"
+          },
+          yaxis: {
+            min: 0,
+            max: 100,
+            show: true
+          },
+          xaxis: {
+            show: true
+          }
+        });
+
+        var interactive_plot_1 = $.plot("#interactive_1", [getRandomData()], {
+          grid: {
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0, // Drawing is faster without shadows
+            color: "#3c8dbc"
+          },
+          lines: {
+            fill: true, //Converts the line chart to area chart
+            color: "#3c8dbc"
+          },
+          yaxis: {
+            min: 0,
+            max: 100,
+            show: true
+          },
+          xaxis: {
+            show: true
+          }
+        });
+
+        var interactive_plot_2 = $.plot("#interactive_2", [getRandomData()], {
+          grid: {
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0, // Drawing is faster without shadows
+            color: "#3c8dbc"
+          },
+          lines: {
+            fill: true, //Converts the line chart to area chart
+            color: "#3c8dbc"
+          },
+          yaxis: {
+            min: 0,
+            max: 100,
+            show: true
+          },
+          xaxis: {
+            show: true
+          }
+        });
+
+        var interactive_plot_3 = $.plot("#interactive_3", [getRandomData()], {
+          grid: {
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0, // Drawing is faster without shadows
+            color: "#3c8dbc"
+          },
+          lines: {
+            fill: true, //Converts the line chart to area chart
+            color: "#3c8dbc"
+          },
+          yaxis: {
+            min: 0,
+            max: 100,
+            show: true
+          },
+          xaxis: {
+            show: true
+          }
+        });
+
         var updateInterval = 500; //Fetch data ever x milliseconds
         var realtime = "on"; //If == to on then fetch data every x seconds. else stop fetching
         function update() {
 
           interactive_plot.setData([getRandomData()]);
-
           // Since the axes don't change, we don't need to call plot.setupGrid()
           interactive_plot.draw();
+
+
+          interactive_plot_0.setData([getRandomData()]);
+          // Since the axes don't change, we don't need to call plot.setupGrid()
+          interactive_plot_0.draw();
+
+
+          interactive_plot_1.setData([getRandomData()]);
+          // Since the axes don't change, we don't need to call plot.setupGrid()
+          interactive_plot_1.draw();
+
+
+          interactive_plot_2.setData([getRandomData()]);
+          // Since the axes don't change, we don't need to call plot.setupGrid()
+          interactive_plot_2.draw();
+
+
+          interactive_plot_3.setData([getRandomData()]);
+          // Since the axes don't change, we don't need to call plot.setupGrid()
+          interactive_plot_3.draw();
+
           if (realtime === "on")
             setTimeout(update, updateInterval);
         }
