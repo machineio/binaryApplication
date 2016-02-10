@@ -205,6 +205,10 @@ p{
 .top_cont_inner{
 	background:url(../img/white_pad.png) no-repeat right bottom;
 	}
+
+.top_cont_inner2{
+	background:url(../img/white_pad_flip.png) no-repeat left bottom;
+	}
 	
 .top_content{
 	position:relative;
