@@ -36,7 +36,9 @@ fun.views.profile = Backbone.View.extend({
 
         this.$el.html(template);
         this.$el.removeClass("hide").addClass("show");
-        this.renderBinaryGraph();
+        //this.renderBinaryGraph();
+
+        this.renderTickGraph();
 
         // startDate = new Date(2013, 6, 25);
         // startTimestamp = new Date(2013, 6, 1).getTime() / 1000;
@@ -97,7 +99,7 @@ fun.views.profile = Backbone.View.extend({
         timeLineChart.html(template);
 
         // clean charts
-        Charts.line('#time-line-chart', data);
+        Charts.line('#fun-time-line-chart', data);
         setTimeout(function () {
             $('.xAxis').children('.flot-tick-label').css('padding-top', '10px');
             $('.yAxis').children('.flot-tick-label').css('margin-left','-10px');
@@ -108,9 +110,7 @@ fun.views.profile = Backbone.View.extend({
     renderTickGraph: function(){
         var ws = new WebSocket("ws://" + location.host + "/ws/alerts");
 
-
-
-        var $placeholder = $('#fun-binary-second-graph');
+        var $placeholder = $('#binary_first_trade');
         var datalen = 100;
         var plot = null;
         var series = {
@@ -289,6 +289,9 @@ fun.views.profile = Backbone.View.extend({
     getWSfeed: function(event){
         console.log('get ws feed');
         fun.utils.updater.start();
+
+        //this.renderTickGraph();
+
     },
 
     firstTradePut: function(event){
