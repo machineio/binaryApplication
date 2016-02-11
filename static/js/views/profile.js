@@ -44,6 +44,66 @@ fun.views.profile = Backbone.View.extend({
        
     },
 
+    renderTimeLineChart: function(summary){
+        // Render today activity chart
+        // This hole summary can be parsed in a single requests
+        // directly to the flot.js library.
+        'use strict';
+        var data = [],
+            ticks = [],
+            seconds = [],
+            minutes = [],
+            records = [],
+            x,
+            template,
+            timeLineChart;
+
+        // check if response from the server
+        if(summary){
+            this.summary = summary;
+            this.minutes = summary.get('minutes');
+            this.records = summary.get('records');
+        }
+
+
+        // push the minutes
+        for (x in this.minutes){
+            minutes.push([Number(x), this.minutes[x]]);
+        }
+
+        // push the records
+        for (x in this.records){
+            records.push([Number(x), this.records[x]]);
+        }
+
+        data.push({
+            data: minutes,
+            label: 'Minutes'
+        });
+
+        data.push({
+            data: records,
+            label: 'Records',
+            points: {show: false},
+            lines: {lineWidth: 2, fill: false}
+        });
+
+        // html template
+        template = _.template(
+            fun.utils.getTemplate(fun.conf.templates.timeLineChart)
+        )(data);
+
+        timeLineChart = this.$('#fun-time-line-chart');
+        timeLineChart.html(template);
+
+        // clean charts
+        Charts.line('#time-line-chart', data);
+        setTimeout(function () {
+            $('.xAxis').children('.flot-tick-label').css('padding-top', '10px');
+            $('.yAxis').children('.flot-tick-label').css('margin-left','-10px');
+        }, 2);
+    },
+
     renderBinaryGraph: function(){
         /*
          * Flot Interactive Chart
