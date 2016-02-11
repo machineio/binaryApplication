@@ -39,7 +39,6 @@
 
 #binary .row .col-md-12 h4 {
     margin-top: 40px;
-    margin-bottom: 64px;
 }
 
 #service {
@@ -49,4 +48,8 @@
 #margin-machine-sigup {
         margin-left: 279px;
         margin-top: 127px;
+}
+
+#margin-machine-binary {
+   margin-bottom: 64px;
 }
