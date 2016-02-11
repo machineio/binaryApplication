@@ -127,8 +127,8 @@ fun.views.profile = Backbone.View.extend({
         };
         ws.onmessage = function(evt) {
 
-            var cleanToday = moment.utc().startOf('day'),
-                todayPlusOne = moment.utc().startOf('day').add(1, 'day'),
+            var cleanNow = moment.utc(),
+                nowSubsTwo = cleanNow.subtract(2, 'hour'),
                 d = $.parseJSON(evt.data);            
 
             var message = d['message'];
@@ -149,9 +149,8 @@ fun.views.profile = Backbone.View.extend({
                             mode: "time",
                             timeformat: "%H:%M:%S",
                             minTickSize: [2, "second"],
-                            min: cleanToday.toDate(),
-                            max: todayPlusOne.toDate(),
-                            twelveHourClock: true
+                            min: nowSubsTwo.toDate(),
+                            max: cleanNow.toDate(),
                         }
                     });
                     plot.draw();
