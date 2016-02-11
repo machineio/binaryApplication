@@ -25,10 +25,22 @@
     
 }
 
-.top_cont_inner2{
+/*.top_cont_inner2{
     background:url(../img/white_pad1.png) no-repeat left bottom;
-    }
+    */}
 
 .color-code-machine {
     color: #141414;
+}
+
+.margin-machine {
+    margin bottom:1px;
+}
+
+#binary .row .col-md-12 h4 {
+    margin-top: 40px;
+}
+
+#service {
+    background-color: #F5F4F4;
 }

@@ -205,10 +205,15 @@ p{
 .top_cont_inner{
 	background:url(../img/white_pad.png) no-repeat right bottom;
 	}
+
+.top_cont_inner2{
+	background:url(../img/white_pad_flip.png) no-repeat left bottom;
+	}
 	
 .top_content{
 	position:relative;
 	padding-top: 50px;
+	margin-bottom: 54px;
 	}
 	
 .white_pad{
@@ -249,10 +254,8 @@ p{
 	
 .top_left_cont p{
 	font-size:16px;
-	color:#888888;
 	margin:0 0 30px 0;
-	line-height: 19px;
-	font-family:'Lato';
+	line-height: 22px;
 	}
 
 a.learn_more2{
@@ -364,7 +367,7 @@ a.learn_more2:hover{
 
 
 #work_outer{
-	background:#f9f9f9;
+	background:#f5f4f4;
 	position:relative;
 	}
 	
