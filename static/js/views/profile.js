@@ -114,7 +114,7 @@ fun.views.profile = Backbone.View.extend({
         var datalen = 100;
         var plot = null;
         var series = {
-            label: "Value",
+            label: "Tick",
             lines: { 
                 show: true,
                 fill: true,
@@ -127,15 +127,16 @@ fun.views.profile = Backbone.View.extend({
         };
         ws.onmessage = function(evt) {
 
-            var cleanNow = moment.utc(),
-                nowSubsTwo = cleanNow.subtract(2, 'hour'),
-                d = $.parseJSON(evt.data);            
+            
+
+            var d = $.parseJSON(evt.data);
+            
 
             var message = d['message'];
 
             if ("instrument" in message){
 
-                series.data.push([Number(message.time) * 1000, message.bid]);
+                series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
                 while (series.data.length > datalen) {
                     series.data.shift();
                 }
@@ -149,8 +150,6 @@ fun.views.profile = Backbone.View.extend({
                             mode: "time",
                             timeformat: "%H:%M:%S",
                             minTickSize: [2, "second"],
-                            min: nowSubsTwo.toDate(),
-                            max: cleanNow.add(2, 'hour').toDate(),
                         }
                     });
                     plot.draw();
