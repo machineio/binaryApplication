@@ -30,7 +30,7 @@ fun.utils.updater = {
     },
 
     processMessage: function(message){
-        console.log(message['message']);
+        console.log(JSON.parse(message['message']));
         /*JSON.parse(message);*/
         if (message['message'] !== 'heartbeat'){
             /*sessionStorage.setItem("obelix", message['message']);*/
