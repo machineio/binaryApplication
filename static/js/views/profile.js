@@ -168,6 +168,7 @@ fun.views.profile = Backbone.View.extend({
 
     getWSfeed: function(event){
         console.log('get ws feed');
+        fun.utils.updater.start();
     },
 
     firstTradePut: function(event){
