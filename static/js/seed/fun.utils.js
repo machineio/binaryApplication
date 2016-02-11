@@ -30,7 +30,8 @@ fun.utils.updater = {
     },
 
     processMessage: function(message){
-        console.log(JSON.parse(message));
+        console.log(message);
+        /*JSON.parse(message);*/
         if (message['message'] !== 'heartbeat'){
             /*sessionStorage.setItem("obelix", message['message']);*/
             fun.omnibus.trigger("obelix:message");
