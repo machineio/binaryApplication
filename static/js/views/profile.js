@@ -128,13 +128,8 @@ fun.views.profile = Backbone.View.extend({
         ws.onmessage = function(evt) {
 
             var cleanToday = moment.utc().startOf('day'),
-            var todayPlusOne = moment.utc().startOf('day').add(1, 'day'),
-
-
-
-
-            var d = $.parseJSON(evt.data);
-            
+                todayPlusOne = moment.utc().startOf('day').add(1, 'day'),
+                d = $.parseJSON(evt.data);            
 
             var message = d['message'];
 
