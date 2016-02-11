@@ -30,23 +30,12 @@ fun.utils.updater = {
     },
 
     processMessage: function(message){
-        console.log(message['message']);
-
-        if( "heartbeat" in message['message'] ) {
-            // do something
-            console.log('hb');
-        }
-
+        
         if( "tick" in message['message'] ) {
             // do something
             console.log('tick');
-        }
-
-
-        /*JSON.parse(message);*/
-        if (message['message'] !== 'heartbeat'){
-            /*sessionStorage.setItem("obelix", message['message']);*/
-            fun.omnibus.trigger("obelix:message");
+            console.log(message['message']);
+            fun.omnibus.trigger("binary:message");
         }
     }
 };
