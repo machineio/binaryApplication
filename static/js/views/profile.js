@@ -7,7 +7,9 @@ fun.views.profile = Backbone.View.extend({
         'click #act_1': 'oneDay',
         'click #act_2': 'threeDays',
         'click #act_3': 'oneWeek',
-        'click #act_4': 'oneMonth'
+        'click #act_4': 'oneMonth',
+        'click #profile-first-trade-put': 'firstTradePut',
+        'click #profile-first-trade-call': 'firstTradeCall'
     },
 
     /**
@@ -157,6 +159,14 @@ fun.views.profile = Backbone.View.extend({
         /* END AREA CHART */
 
 
+    },
+
+    firstTradeCall: function(event){
+        console.log('first trade call');
+    },
+
+    firstTradePut: function(event){
+        console.log('first trade put');
     },
 
     oneDay: function(event){
