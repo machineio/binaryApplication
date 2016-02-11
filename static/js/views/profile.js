@@ -135,7 +135,7 @@ fun.views.profile = Backbone.View.extend({
 
             if ("instrument" in message){
 
-                series.data.push([message.time, message.bid]);
+                series.data.push([Number(message.time) * 1000, message.bid]);
                 while (series.data.length > datalen) {
                     series.data.shift();
                 }
