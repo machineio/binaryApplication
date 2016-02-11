@@ -31,9 +31,8 @@ fun.utils.updater = {
 
     processMessage: function(message){
         
-        if( "tick" in message['message'] ) {
+        if( "time" in message['message'] ) {
             // do something
-            console.log('tick');
             console.log(message['message']);
             fun.omnibus.trigger("binary:message");
         }
