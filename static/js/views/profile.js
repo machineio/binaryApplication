@@ -150,7 +150,7 @@ fun.views.profile = Backbone.View.extend({
                             timeformat: "%H:%M:%S",
                             minTickSize: [2, "second"],
                             min: nowSubsTwo.toDate(),
-                            max: cleanNow.toDate(),
+                            max: cleanNow.add(2, 'hour').toDate(),
                         }
                     });
                     plot.draw();
