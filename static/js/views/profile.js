@@ -9,7 +9,8 @@ fun.views.profile = Backbone.View.extend({
         'click #act_3': 'oneWeek',
         'click #act_4': 'oneMonth',
         'click #profile-first-trade-put': 'firstTradePut',
-        'click #profile-first-trade-call': 'firstTradeCall'
+        'click #profile-first-trade-call': 'firstTradeCall',
+        'click #ws-test-feed': 'getWSfeed'
     },
 
     /**
@@ -163,6 +164,10 @@ fun.views.profile = Backbone.View.extend({
 
     firstTradeCall: function(event){
         console.log('first trade call');
+    },
+
+    getWSfeed: function(event){
+        console.log('get ws feed');
     },
 
     firstTradePut: function(event){
