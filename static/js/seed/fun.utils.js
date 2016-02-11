@@ -37,7 +37,7 @@ fun.utils.updater = {
             fun.omnibus.trigger("heartbeat:message");
         }
 
-        if (message !== "heartbeat" && "obelix" in message['message']){
+        if (message !== "heartbeat" && "obelix" in message){
             sessionStorage.setItem("obelix", message['message']);
             fun.omnibus.trigger("obelix:message");
         }
