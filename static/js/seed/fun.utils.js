@@ -32,7 +32,7 @@ fun.utils.updater = {
 
     processMessage: function(message){
 
-        if ("heartbeat" in message['message'] || message == "heartbeat"){
+        if (message === "heartbeat" || "heartbeat" in message['message']){
             console.log(message['message']);
             fun.omnibus.trigger("heartbeat:message");
         }
