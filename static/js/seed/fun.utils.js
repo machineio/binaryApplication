@@ -29,7 +29,18 @@ fun.utils.updater = {
         }
     },
 
+
     processMessage: function(message){
+
+        if ("heartbeat" in message['message']){
+            console.log(message['message']);
+            fun.omnibus.trigger("heartbeat:message");
+        }
+
+        if ("obelix" in message['message']){
+            sessionStorage.setItem("obelix", message['message']);
+            fun.omnibus.trigger("obelix:message");
+        }
         
         if( "time" in message['message'] ) {
             // do something
