@@ -129,12 +129,12 @@ fun.views.profile = Backbone.View.extend({
 
 
             var d = $.parseJSON(evt.data);
-            console.log(d['message'].time);
+            
 
             var message = d['message'];
 
             if ("instrument" in message){
-                console.log(message);
+
                 series.data.push([message.time, message.bid]);
                 while (series.data.length > datalen) {
                     series.data.shift();
