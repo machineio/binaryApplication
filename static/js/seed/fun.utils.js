@@ -35,12 +35,11 @@ fun.utils.updater = {
         var message = message['message'];
 
         if ("heartbeat" in message){
-            console.log(message);
             fun.omnibus.trigger("heartbeat:message");
         }
 
         if ("obelix" in message){
-            sessionStorage.setItem("obelix", message['message']);
+            sessionStorage.setItem("obelix", message);
             fun.omnibus.trigger("obelix:message");
         }
         
