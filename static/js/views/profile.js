@@ -129,7 +129,9 @@ fun.views.profile = Backbone.View.extend({
 
 
             var d = $.parseJSON(evt.data);
-            console.log(d);
+            console.log(d['message']);
+
+            
             series.data.push([d.x, d.y]);
             while (series.data.length > datalen) {
                 series.data.shift();
