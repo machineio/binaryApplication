@@ -157,7 +157,7 @@ fun.views.profile = Backbone.View.extend({
         /* END AREA CHART */
 
 
-    }
+    },
 
     oneDay: function(event){
         console.log('one day event');
