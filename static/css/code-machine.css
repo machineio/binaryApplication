@@ -43,9 +43,10 @@
 }
 
 #service {
-    background-color: #F5F4F4;
+    background-color: #f7f6f6;
 }
 
-#test.top_cont_inner2 {
-        padding: 67px;
+#test {
+        margin-left: 279px;
+        margin-top: 127px;
 }
