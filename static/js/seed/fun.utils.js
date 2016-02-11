@@ -32,21 +32,21 @@ fun.utils.updater = {
 
     processMessage: function(message){
 
-        console.log(message);
+        var message = message['message'];
 
-        if (message === "heartbeat" || "heartbeat" in message){
-            console.log(message['message']);
+        if ("heartbeat" in message){
+            console.log(message);
             fun.omnibus.trigger("heartbeat:message");
         }
 
-        if (message !== "heartbeat" && "obelix" in message){
+        if ("obelix" in message){
             sessionStorage.setItem("obelix", message['message']);
             fun.omnibus.trigger("obelix:message");
         }
         
-        if( "time" in message ) {
+        if("time" in message) {
             // do something
-            console.log(message['message']);
+            console.log(message);
             fun.omnibus.trigger("binary:message");
         }
     }
