@@ -42,7 +42,7 @@ fun.utils.updater = {
             fun.omnibus.trigger("obelix:message");
         }
         
-        if( "time" in message['message'] ) {
+        if( "time" in message ) {
             // do something
             console.log(message['message']);
             fun.omnibus.trigger("binary:message");
