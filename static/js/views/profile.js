@@ -131,29 +131,36 @@ fun.views.profile = Backbone.View.extend({
             var d = $.parseJSON(evt.data);
             console.log(d['message'].time);
 
+            var message = d['message'];
 
-            series.data.push([d.x, d.y]);
-            while (series.data.length > datalen) {
-                series.data.shift();
+            if ("instrument" in message){
+                console.log(message);
+                series.data.push([message.time, message.bid]);
+                while (series.data.length > datalen) {
+                    series.data.shift();
+                }
+                if(plot) {
+                    plot.setData([series]);
+                    plot.setupGrid();
+                    plot.draw();
+                } else if(series.data.length > 10) {
+                    plot = $.plot($placeholder, [series], {
+                        xaxis:{
+                            mode: "time",
+                            timeformat: "%H:%M:%S",
+                            minTickSize: [2, "second"],
+                        },
+                        yaxis: {
+                            min: 0,
+                            max: 5
+                        }
+                    });
+                    plot.draw();
+                }
             }
-            if(plot) {
-                plot.setData([series]);
-                plot.setupGrid();
-                plot.draw();
-            } else if(series.data.length > 10) {
-                plot = $.plot($placeholder, [series], {
-                    xaxis:{
-                        mode: "time",
-                        timeformat: "%H:%M:%S",
-                        minTickSize: [2, "second"],
-                    },
-                    yaxis: {
-                        min: 0,
-                        max: 5
-                    }
-                });
-                plot.draw();
-            }
+
+
+            
         }
         ws.onopen = function(evt) {
             $('#conn_status').html('<b>Connected</b>');
