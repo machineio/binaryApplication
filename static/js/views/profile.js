@@ -10,7 +10,6 @@ fun.views.profile = Backbone.View.extend({
         'click #act_4': 'oneMonth',
         'click #profile-first-trade-put': 'firstTradePut',
         'click #profile-first-trade-call': 'firstTradeCall',
-        'click #ws-test-feed': 'getWSfeed'
     },
 
     /**
@@ -109,6 +108,19 @@ fun.views.profile = Backbone.View.extend({
 
     renderTickGraph: function(){
         var ws = new WebSocket("ws://" + location.host + "/ws/alerts");
+
+
+        // so if we have a binary_fist_trade id then we have a dropdown menu with the asset for this tick.
+
+        // let try that out.
+
+        
+
+        var element = document.getElementById("binary_fist_asset");
+       
+        var strUser = element.options[element.selectedIndex].value;
+
+        console.log('strUser')
 
         var $placeholder = $('#binary_first_trade');
         var datalen = 100;
@@ -292,13 +304,13 @@ fun.views.profile = Backbone.View.extend({
         console.log('first trade call');
     },
 
-    getWSfeed: function(event){
+    /*getWSfeed: function(event){
         console.log('get ws feed');
         fun.utils.updater.start();
 
         //this.renderTickGraph();
 
-    },
+    },*/
 
     firstTradePut: function(event){
         console.log('first trade put');
