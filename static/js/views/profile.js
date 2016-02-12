@@ -120,7 +120,7 @@ fun.views.profile = Backbone.View.extend({
        
         var strUser = element.options[element.selectedIndex].value;
 
-        console.log('strUser')
+        console.log(strUser);
 
         var $placeholder = $('#binary_first_trade');
         var datalen = 100;
