@@ -157,6 +157,8 @@ fun.views.profile = Backbone.View.extend({
                 if (firstAsset === message['instrument']){
                     console.log(message);
 
+                    $('#ws-tick-feed').html(message.bid);
+
                     series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
                     while (series.data.length > datalen) {
                         series.data.shift();
