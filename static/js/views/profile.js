@@ -110,7 +110,7 @@ fun.views.profile = Backbone.View.extend({
 
         var element = document.getElementById("binary_fist_asset");
        
-        var strUser = element.options[element.selectedIndex].text;
+        var strUser = element.options[element.selectedIndex].value;
 
         console.log(strUser);
 
