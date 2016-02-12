@@ -325,6 +325,43 @@ fun.views.profile = Backbone.View.extend({
 
     firstTradePut: function(event){
         console.log('first trade put');
+        'use strict';
+        var signupError,
+            asset,
+            expiry,
+            amount,
+            view,
+            rules,
+            validationRules,
+            callbacks,
+            validForm;
+        event.preventDefault();
+        signupError = this.signupError;
+        asset = this.asset.val();
+        expiry = this.expiry.val();
+        amount = this.amount.val();
+        // check if this view stuff is really needed
+        view = this;
+        // form validation rules
+        rules = {
+            rules: {
+                landing_username: {
+                    minlength: 2,
+                    required: true
+                },
+                landing_email: {
+                    required: true,
+                    email: true
+                },
+                landing_password: {
+                    minlength: 8,
+                    required: true
+                }
+            }
+        }
+        validationRules = $.extend(rules, fun.utils.validationRules);
+
+        $('#langing-signup-form').validate(validationRules);
     },
 
     oneDay: function(event){

@@ -6,16 +6,8 @@ fun.views.dashboard = Backbone.View.extend({
         'click #today-btn': 'today',
         'click #this-week-btn': 'thisWeek',
         'click #this-month-btn': 'thisMonth',
-        'click #this-year-btn': 'thisYear',
-        'click #incoming-form-btn': 'showHideForm',
-        'click #ws-test-btn': 'wsTest',
-        'click .campaign-popup': 'giveMe',
-        'click .inbound-campaign-popup': 'showInboundModal',
-        'click .outbound-campaign-popup': 'showOutboundModal',
-        'click .task-popup': 'showTaskModal',
-        'click .contacts-directory-popup': 'giveMeTee',
-        'click #close-campaign-dashboard-btn': 'closeCampaign',
-        'click #campaign-agents-btn': 'showAgents',
+        'click #this-year-btn': 'thisYear'
+
     },
 
     initialize: function(options){
@@ -48,57 +40,7 @@ fun.views.dashboard = Backbone.View.extend({
         this.renderRecordType();
     },
 
-    giveMe: function(){
-        $('#dashboardCampaignModal').modal({
-            'show': true
-        });
-
-    },
-
-    giveMeTee: function(){
-        console.log('give me tee');
-        $('#dashboardContactsDirectoryModal').modal({
-            'show': true
-        });
-    },
-
-    giveMeKfe: function(){
-        console.log('give me kfe');
-    },
-
-    showOutboundModal: function(){
-        $('#dashboardOutboundCampaignModal').modal({
-            'show': true
-        });
-
-    },
-
-    showInboundModal: function(){
-        $('#dashboardInboundCampaignModal').modal({
-            'show': true
-        });
-
-    },
-
-    showTaskModal: function(){
-        $('#dashboardTaskModal').modal({
-            'show': true
-        });
-    },
-
-    renderBoo: function(){
-        'use strict';
-        console.log('corporate warfare');
-    },
-
-    renderBooBoo: function(){
-        'use strict';
-        console.log('Welcome to corporate warfare on mars via websockets');
-        var message = sessionStorage.getItem("obelix");
-        var stuff = JSON.parse(message);
-        console.log(stuff)
-        $('#pvtScriptModal').modal('show');
-    },
+    
 
     renderTodaySummary: function(summary, billing){
         // Render today summary
@@ -329,44 +271,6 @@ fun.views.dashboard = Backbone.View.extend({
         'use strict';
         // This year
         console.log('this year event');
-    },
-
-    showHideForm: function(){
-        if($('#formView').hasClass('hide')){
-            $('#pills').removeClass('show');
-            $('#pills').addClass('hide');
-            $('#formView').removeClass('hide');
-            $('#formView').addClass('show');
-            $('#incoming-form-btn').text(fun.strings.contact);
-        } else {
-            $('#formView').removeClass('show');
-            $('#formView').addClass('hide');
-            $('#pills').removeClass('hide');
-            $('#pills').addClass('show');
-            $('#incoming-form-btn').text(fun.strings.form);
-        }
-    },
-
-    showAgents: function(){
-        if($('#agentList').hasClass('hide')){
-            $('#agentList').removeClass('hide');
-            $('#agentList').addClass('show');
-            $('#campaignStatus').removeClass('show');
-            $('#campaignStatus').addClass('hide');
-        } else {
-            $('#agentList').removeClass('show');
-            $('#agentList').addClass('hide');
-            $('#campaignStatus').removeClass('hide');
-            $('#campaignStatus').addClass('show');
-        }
-    },
-
-    closeCampaign: function(){
-        $('#dashboardCampaignModal').modal('hide');
-    },
-
-    wsTest: function(){
-        fun.utils.updater.start();
     }
 
 });
