@@ -155,7 +155,6 @@ fun.views.profile = Backbone.View.extend({
                 var firstAsset = firstElement.options[firstElement.selectedIndex].value;
 
                 if (firstAsset === message['instrument']){
-                    console.log(message);
 
                     $('#ws-tick-feed').html(message.bid);
 
