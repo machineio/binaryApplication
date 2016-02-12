@@ -36,18 +36,13 @@ fun.views.profile = Backbone.View.extend({
 
         this.$el.html(template);
         this.$el.removeClass("hide").addClass("show");
-        //this.renderBinaryGraph();
 
+        //this.renderBinaryGraph();
         this.renderTickGraph();
 
         $('#clock').countdown('2020/10/10', function(event) {
             $(this).html(event.strftime('%H:%M:%S'));
-        });
-
-        // startDate = new Date(2013, 6, 25);
-        // startTimestamp = new Date(2013, 6, 1).getTime() / 1000;
-
-       
+        });       
     },
 
     renderTimeLineChart: function(summary){
