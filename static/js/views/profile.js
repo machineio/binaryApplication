@@ -152,7 +152,14 @@ fun.views.profile = Backbone.View.extend({
 
             if ("instrument" in message){
 
-                console.log(message['instrument']);
+                
+                var firstElement = document.getElementById("binary_fist_asset");
+                var firstAsset = firstElement.options[firstElement.selectedIndex].value;
+
+                if (firstAsset === message['instrument']){
+                    console.log(message);
+                }
+
 
                 series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
                 while (series.data.length > datalen) {
