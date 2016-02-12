@@ -10,6 +10,7 @@ fun.views.profile = Backbone.View.extend({
         'click #act_4': 'oneMonth',
         'click #profile-first-trade-put': 'firstTradePut',
         'click #profile-first-trade-call': 'firstTradeCall',
+        'change #binary_fist_asset': 'assetTypeChange',
     },
 
     /**
@@ -105,6 +106,16 @@ fun.views.profile = Backbone.View.extend({
         }, 2);
     },
 
+    assetTypeChange: function(event){
+
+        var element = document.getElementById("binary_fist_asset");
+       
+        var strUser = element.options[element.selectedIndex].value;
+
+        console.log(strUser);
+
+    },
+
 
     renderTickGraph: function(){
         var ws = new WebSocket("ws://" + location.host + "/ws/alerts");
@@ -114,13 +125,6 @@ fun.views.profile = Backbone.View.extend({
 
         // let try that out.
 
-        
-
-        var element = document.getElementById("binary_fist_asset");
-       
-        var strUser = element.options[element.selectedIndex].value;
-
-        console.log(strUser);
 
         var $placeholder = $('#binary_first_trade');
         var datalen = 100;
