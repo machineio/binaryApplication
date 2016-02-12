@@ -42,7 +42,7 @@
 }
 
 #service {
-    background-color: #f7f6f6;
+    background-color: #171717;
 }
 
 #margin-machine-sigup {
@@ -101,4 +101,11 @@
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+#font-size2 h3{
+    font-size: 40px;
+}
+
+#margin-machine-bottom {
+    margin-bottom: 40px;
+}
  
