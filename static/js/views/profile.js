@@ -143,10 +143,8 @@ fun.views.profile = Backbone.View.extend({
         };
         ws.onmessage = function(evt) {
 
-            
 
             var d = $.parseJSON(evt.data);
-            
 
             var message = d['message'];
 
@@ -158,27 +156,27 @@ fun.views.profile = Backbone.View.extend({
 
                 if (firstAsset === message['instrument']){
                     console.log(message);
+
+                    series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
+                    while (series.data.length > datalen) {
+                        series.data.shift();
+                    }
+                    if(plot) {
+                        plot.setData([series]);
+                        plot.setupGrid();
+                        plot.draw();
+                    } else if(series.data.length > 10) {
+                        plot = $.plot($placeholder, [series], {
+                            xaxis:{
+                                mode: "time",
+                                timeformat: "%H:%M:%S",
+                                minTickSize: [2, "second"],
+                            }
+                        });
+                        plot.draw();
+                    }
                 }
 
-
-                series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
-                while (series.data.length > datalen) {
-                    series.data.shift();
-                }
-                if(plot) {
-                    plot.setData([series]);
-                    plot.setupGrid();
-                    plot.draw();
-                } else if(series.data.length > 10) {
-                    plot = $.plot($placeholder, [series], {
-                        xaxis:{
-                            mode: "time",
-                            timeformat: "%H:%M:%S",
-                            minTickSize: [2, "second"],
-                        }
-                    });
-                    plot.draw();
-                }
             }
 
 
