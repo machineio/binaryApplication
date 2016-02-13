@@ -363,8 +363,8 @@ fun.views.profile = Backbone.View.extend({
                 },
                 profile_first_amount: {
                     required: true,
-                    minlength: 3
-                    //email: true
+                    minlength: 3,
+                    email: true
                 },
                 profile_first_expiry: {
                     //minlength: 8,
