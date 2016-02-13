@@ -114,10 +114,12 @@ fun.views.profile = Backbone.View.extend({
     },
 
     assetTypeChange: function(event){
+        'use strict';
+        var element, strUser;
 
-        var element = document.getElementById("binary_fist_asset");
+        element = document.getElementById("binary_fist_asset");
        
-        var strUser = element.options[element.selectedIndex].value;
+        strUser = element.options[element.selectedIndex].value;
 
         console.log(strUser);
 
