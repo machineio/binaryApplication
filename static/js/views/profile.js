@@ -358,23 +358,22 @@ fun.views.profile = Backbone.View.extend({
         // form validation rules
         rules = {
             rules: {
-                profile_asset: {
-                    minlength: 2,
+                profile_first_asset: {
                     required: true
                 },
-                landing_email: {
+                profile_first_amount: {
                     required: true,
-                    email: true
+                    //email: true
                 },
-                landing_password: {
-                    minlength: 8,
+                profile_first_expory: {
+                    //minlength: 8,
                     required: true
                 }
             }
         }
         validationRules = $.extend(rules, fun.utils.validationRules);
 
-        $('#langing-signup-form').validate(validationRules);
+        $('#profile-first-trade-form').validate(validationRules);
     },
 
     oneDay: function(event){
