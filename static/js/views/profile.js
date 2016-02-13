@@ -125,18 +125,23 @@ fun.views.profile = Backbone.View.extend({
 
 
     renderTickGraph: function(){
-        var ws = new WebSocket("ws://" + location.host + "/ws/alerts");
+        'use strict';
+        var ws = new WebSocket("ws://" + location.host + "/ws/alerts"),
+            placeholder = $('#binary_first_trade'),
+            datalen = 100,
+            plot = null,
+            series,
+            data,
+            message,
+            firstElement,
+            firstAsset;
 
 
         // so if we have a binary_fist_trade id then we have a dropdown menu with the asset for this tick.
 
         // let try that out.
 
-
-        var $placeholder = $('#binary_first_trade');
-        var datalen = 100;
-        var plot = null;
-        var series = {
+        series = {
             label: "Tick",
             lines: { 
                 show: true,
@@ -148,18 +153,17 @@ fun.views.profile = Backbone.View.extend({
             },
             data: []
         };
-        ws.onmessage = function(evt) {
 
+        ws.onmessage = function(event) {
 
-            var d = $.parseJSON(evt.data);
+            data = $.parseJSON(event.data);
 
-            var message = d['message'];
+            message = data['message'];
 
             if ("instrument" in message){
 
-                
-                var firstElement = document.getElementById("binary_fist_asset");
-                var firstAsset = firstElement.options[firstElement.selectedIndex].value;
+                firstElement = document.getElementById("binary_fist_asset");
+                firstAsset = firstElement.options[firstElement.selectedIndex].value;
 
                 if (firstAsset === message['instrument']){
 
@@ -190,13 +194,13 @@ fun.views.profile = Backbone.View.extend({
 
             
         }
-        ws.onopen = function(evt) {
+        ws.onopen = function(event) {
             $('#conn_status').html('<b>Connected</b>');
         }
-        ws.onerror = function(evt) {
+        ws.onerror = function(event) {
             $('#conn_status').html('<b>Error</b>');
         }
-        ws.onclose = function(evt) {
+        ws.onclose = function(event) {
             $('#conn_status').html('<b>Closed</b>');
         }
     },
