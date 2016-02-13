@@ -37,6 +37,14 @@ fun.views.profile = Backbone.View.extend({
         this.$el.html(template);
         this.$el.removeClass("hide").addClass("show");
 
+        // Cache DOM stuff
+        this.signupError = this.$('#landing-alert');
+
+        // Form inputs
+        this.asset = this.$('#landing_username');
+        this.expiry = this.$('#landing_username');
+        this.amount = this.$('#landing_email');
+        
         //this.renderBinaryGraph();
         this.renderTickGraph();
 
@@ -345,7 +353,7 @@ fun.views.profile = Backbone.View.extend({
         // form validation rules
         rules = {
             rules: {
-                landing_username: {
+                profile_asset: {
                     minlength: 2,
                     required: true
                 },
