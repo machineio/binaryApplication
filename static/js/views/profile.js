@@ -351,6 +351,8 @@ fun.views.profile = Backbone.View.extend({
         asset = this.asset.val();
         expiry = this.expiry.val();
         amount = this.amount.val();
+
+        console.log(asset, expiry, amount);
         // check if this view stuff is really needed
         view = this;
         // form validation rules
