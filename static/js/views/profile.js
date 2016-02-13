@@ -375,6 +375,16 @@ fun.views.profile = Backbone.View.extend({
         validationRules = $.extend(rules, fun.utils.validationRules);
 
         $('#profile-first-trade-form').validate(validationRules);
+        console.log('despues q?');
+
+        // check for a valid form and create the new user account
+        validForm = $('#profile-first-trade-form').valid();
+        if (validForm){
+            //event.preventDefault();
+            console.log('yeah!');
+        } else {
+          console.log('nooo!');
+        }
     },
 
     oneDay: function(event){
