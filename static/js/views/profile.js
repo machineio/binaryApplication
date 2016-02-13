@@ -37,13 +37,10 @@ fun.views.profile = Backbone.View.extend({
         this.$el.html(template);
         this.$el.removeClass("hide").addClass("show");
 
-        // Cache DOM stuff
-        this.signupError = this.$('#landing-alert');
-
         // Form inputs
-        this.asset = this.$('#landing_username');
-        this.expiry = this.$('#landing_username');
-        this.amount = this.$('#landing_email');
+        this.asset = this.$('#profile_first_asset');
+        this.expiry = this.$('#profile_first_expiry');
+        this.amount = this.$('#profile_first_amount');
         
         //this.renderBinaryGraph();
         this.renderTickGraph();
