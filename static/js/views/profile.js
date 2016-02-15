@@ -10,7 +10,7 @@ fun.views.profile = Backbone.View.extend({
         'click #act_4': 'oneMonth',
         'click #profile-first-trade-put': 'firstTradePut',
         'click #profile-first-trade-call': 'firstTradeCall',
-        'change #binary_first_asset': 'assetTypeChange',
+        'change #profile_first_asset': 'assetTypeChange',
     },
 
     /**
@@ -114,7 +114,7 @@ fun.views.profile = Backbone.View.extend({
         'use strict';
         var element, strUser;
 
-        element = document.getElementById("binary_first_asset");
+        element = document.getElementById("profile_first_asset");
        
         strUser = element.options[element.selectedIndex].value;
 
@@ -161,7 +161,7 @@ fun.views.profile = Backbone.View.extend({
 
             if ("instrument" in message){
 
-                firstElement = document.getElementById("binary_first_asset");
+                firstElement = document.getElementById("profile_first_asset");
                 firstAsset = firstElement.options[firstElement.selectedIndex].value;
 
                 if (firstAsset === message['instrument']){
