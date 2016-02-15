@@ -176,8 +176,8 @@ fun.views.profile = Backbone.View.extend({
                         plot.setData([series]);
                         plot.setupGrid();
                         plot.draw();
-                    } else if(series.data.length > 10) {
-                        plot = $.plot($placeholder, [series], {
+                    } else { // if(series.data.length > 10)
+                        plot = $.plot(placeholder, [series], {
                             xaxis:{
                                 mode: "time",
                                 timeformat: "%H:%M:%S",
