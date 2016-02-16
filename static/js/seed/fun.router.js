@@ -52,7 +52,6 @@ fun.Router = Backbone.Router.extend({
         "expert":"expert",
         "elite":"elite",
         "categorizer":"categorizer",
-        "forums":"forums",
         "settings": "settings",
         "logout": "logout"
     },
@@ -198,10 +197,6 @@ fun.Router = Backbone.Router.extend({
         // categorizer
         fun.instances.categorizer = new fun.views.categorizer({
             el:"#fun-categorizer"
-        });
-        // forums
-        fun.instances.forums = new fun.views.forums({
-            el:"#fun-forums"
         });
 
         // reports
@@ -352,17 +347,6 @@ fun.Router = Backbone.Router.extend({
         fun.instances.navbar.render();
         fun.instances.subheader.render(redeem);
         fun.instances.redeem.render();
-        fun.instances.footer.render();
-    },
-
-    forums: function(){
-        'use strict';
-        var forums = translate('forums');
-        fun.utils.hideAll();
-        fun.utils.hideLanding();
-        fun.instances.navbar.render();
-        fun.instances.subheader.render(forums);
-        fun.instances.forums.render();
         fun.instances.footer.render();
     },
 
