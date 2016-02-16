@@ -46,7 +46,13 @@ fun.Router = Backbone.Router.extend({
         "deposit": "deposit",
         "withdraw": "withdraw",
         "redeem":"redeem",
-        
+        "purshace":"purchase",
+        "begginer":"begginer",
+        "intermediate":"intermediate",
+        "expert":"expert",
+        "elite":"elite",
+        "categorizer":"categorizer",
+        "forms":"forms",
         "settings": "settings",
         "logout": "logout"
     },
@@ -165,6 +171,39 @@ fun.Router = Backbone.Router.extend({
         fun.instances.education = new fun.views.education({
             el:"#fun-education"
         });
+        // redeem
+        fun.instances.redeem = new fun.views.redeem({
+            el:"#fun-redeem"
+        });
+        // purchase
+        fun.instances.purchase = new fun.views.purchase({
+            el:"#fun-purchase"
+        });
+        // begginer
+        fun.instances.begginer = new fun.views.begginer({
+            el:"#fun-begginer"
+        });
+        // intermediate
+        fun.instances.intermediate = new fun.views.intermediate({
+            el:"#fun-intermediate"
+        });
+        // expert
+        fun.instances.expert = new fun.views.expert({
+            el:"#fun-expert"
+        });
+        // elite
+        fun.instances.elite = new fun.views.elite({
+            el:"#fun-elite"
+        });
+        // categorizer
+        fun.instances.categorizer = new fun.views.categorizer({
+            el:"#fun-categorizer"
+        });
+        // forums
+        fun.instances.forums = new fun.views.forums({
+            el:"#fun-forums"
+        });
+
         // reports
         fun.instances.reports = new fun.views.reports({
             el:"#fun-reports"
