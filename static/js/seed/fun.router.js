@@ -45,6 +45,8 @@ fun.Router = Backbone.Router.extend({
         "stocks":"stocks",
         "deposit": "deposit",
         "withdraw": "withdraw",
+        "redeem":"redeem",
+        
         "settings": "settings",
         "logout": "logout"
     },
