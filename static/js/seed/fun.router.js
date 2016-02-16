@@ -352,7 +352,7 @@ fun.Router = Backbone.Router.extend({
 
     categorizer: function(){
         'use strict';
-        var forums = translate('categorizer');
+        var categorizer = translate('categorizer');
         fun.utils.hideAll();
         fun.utils.hideLanding();
         fun.instances.navbar.render();
