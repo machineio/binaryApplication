@@ -42,7 +42,7 @@
 }
 
 #service {
-    background-color: #171717;
+    background-color: #F3F3F2;
 }
 
 #margin-machine-sigup {
@@ -107,5 +107,9 @@
 
 #margin-machine-bottom {
     margin-bottom: 40px;
+}
+
+#background-color-footer {
+    background-color: #f3f3f2;
 }
  
