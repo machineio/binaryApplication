@@ -1,4 +1,4 @@
-fun.views.reedem = Backbone.View.extend({
+fun.views.redeem = Backbone.View.extend({
 
     /*
     * Bind the event functions to the different HTML elements
@@ -11,15 +11,15 @@ fun.views.reedem = Backbone.View.extend({
     * Class constructor
     */
     initialize : function(options) {
-        fun.containers.reedem = this.$el;
+        fun.containers.redeem = this.$el;
     },
     
     /*
-    * Render the reedem view
+    * Render the redeem view
     */
     render : function(){
         if (!this.$el.html()){
-            var template = _.template(fun.utils.getTemplate(fun.conf.templates.reedem));
+            var template = _.template(fun.utils.getTemplate(fun.conf.templates.redeem));
             this.$el.html(template);
         }
         this.$el.removeClass("hide").addClass("show");
