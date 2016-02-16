@@ -168,6 +168,16 @@ fun.conf.templates = {
     currencies: fun.utils.format('%s/currencies.html', fun.conf.html),
     stocks: fun.utils.format('%s/stocks.html', fun.conf.html),
     deposit: fun.utils.format('%s/deposit.html', fun.conf.html),
+
+    purchase: fun.utils.format('%s/purchase.html', fun.conf.html),
+    redeem: fun.utils.format('%s/redeem.html', fun.conf.html),
+    begginer: fun.utils.format('%s/begginer.html', fun.conf.html),
+    intermediate: fun.utils.format('%s/intermediate.html', fun.conf.html),
+    expert: fun.utils.format('%s/expert.html', fun.conf.html),
+    elite: fun.utils.format('%s/elite.html', fun.conf.html),
+    categorizer: fun.utils.format('%s/categorizer.html', fun.conf.html),
+    forums: fun.utils.format('%s/forums.html', fun.conf.html),
+
     withdraw: fun.utils.format('%s/withdraw.html', fun.conf.html),
     features: fun.utils.format('%s/features.html', fun.conf.html),
     calendars: fun.utils.format('%s/calendars.html', fun.conf.html),
