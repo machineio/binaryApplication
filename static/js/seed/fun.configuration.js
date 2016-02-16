@@ -298,6 +298,16 @@ fun.conf.hash = {
     enterprise: '#enterprise',
     education: '#education',
 
+    redeem: '#redeem',
+    purchase: '#purchase',
+    begginer: '#begginer',
+    intermediate: '#intermediate',
+    expert: '#expert',
+    elite: '#elite',
+    categorizer: '#categorizer',
+    forums: '#forums',
+
+
     terms: '#terms',
     privacy: '#privacy',
     security: '#security',

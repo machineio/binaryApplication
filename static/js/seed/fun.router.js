@@ -52,7 +52,7 @@ fun.Router = Backbone.Router.extend({
         "expert":"expert",
         "elite":"elite",
         "categorizer":"categorizer",
-        "forms":"forms",
+        "forums":"forums",
         "settings": "settings",
         "logout": "logout"
     },
@@ -286,6 +286,94 @@ fun.Router = Backbone.Router.extend({
         fun.instances.navbar.render();
         fun.instances.subheader.render(binary);
         fun.instances.binary.render();
+        fun.instances.footer.render();
+    },
+
+    elite: function(){
+        'use strict';
+        var elite = translate('elite');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(elite);
+        fun.instances.elite.render();
+        fun.instances.footer.render();
+    },
+
+    expert: function(){
+        'use strict';
+        var expert = translate('expert');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(expert);
+        fun.instances.expert.render();
+        fun.instances.footer.render();
+    },
+
+    intermediate: function(){
+        'use strict';
+        var intermediate = translate('intermediate');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(intermediate);
+        fun.instances.intermediate.render();
+        fun.instances.footer.render();
+    },
+
+    begginer: function(){
+        'use strict';
+        var begginer = translate('begginer');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(begginer);
+        fun.instances.begginer.render();
+        fun.instances.footer.render();
+    },
+
+    purchase: function(){
+        'use strict';
+        var purchase = translate('purchase');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(purchase);
+        fun.instances.purchase.render();
+        fun.instances.footer.render();
+    },
+
+    redeem: function(){
+        'use strict';
+        var redeem = translate('redeem');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(redeem);
+        fun.instances.redeem.render();
+        fun.instances.footer.render();
+    },
+
+    forums: function(){
+        'use strict';
+        var forums = translate('forums');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(forums);
+        fun.instances.forums.render();
+        fun.instances.footer.render();
+    },
+
+    categorizer: function(){
+        'use strict';
+        var forums = translate('categorizer');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(categorizer);
+        fun.instances.categorizer.render();
         fun.instances.footer.render();
     },
 
