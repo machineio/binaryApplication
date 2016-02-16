@@ -176,7 +176,6 @@ fun.conf.templates = {
     expert: fun.utils.format('%s/expert.html', fun.conf.html),
     elite: fun.utils.format('%s/elite.html', fun.conf.html),
     categorizer: fun.utils.format('%s/categorizer.html', fun.conf.html),
-    forums: fun.utils.format('%s/forums.html', fun.conf.html),
 
     withdraw: fun.utils.format('%s/withdraw.html', fun.conf.html),
     features: fun.utils.format('%s/features.html', fun.conf.html),
