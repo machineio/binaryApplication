@@ -121,6 +121,14 @@
 
 
 
-margin-top: 200px;
+#footer-margin{
+    padding-bottom: 20px;
+    margin-top: 300px;
     padding: 50px;
+}
+
+#landing_username-error{
+    color: #c52127;
+}
+    
     
