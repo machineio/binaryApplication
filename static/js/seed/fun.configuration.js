@@ -317,7 +317,7 @@ fun.conf.hash = {
     elite: '#elite',
     categorizer: '#categorizer',
     forums: '#forums',
-    trader: '#trader'
+    trader: '#trader',
     risk: '#risk',
 
     terms: '#terms',
