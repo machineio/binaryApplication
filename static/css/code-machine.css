@@ -130,5 +130,13 @@
 #landing_username-error{
     color: #c52127;
 }
+
+#landing_email-error{
+    color: #c52127;
+}
+
+#landing_password-error{
+    color: #c52127;
+}
     
     
