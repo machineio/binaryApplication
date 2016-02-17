@@ -111,5 +111,32 @@
 
 #background-color-footer {
     background-color: #d2d2d2;
+    
+
 }
  
+#color-bottom {
+    background-color: #FFF;
+}
+
+
+
+#footer-margin{
+    padding-bottom: 20px;
+    margin-top: 300px;
+    padding: 50px;
+}
+
+#landing_username-error{
+    color: #c52127;
+}
+
+#landing_email-error{
+    color: #c52127;
+}
+
+#landing_password-error{
+    color: #c52127;
+}
+    
+    
