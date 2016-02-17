@@ -223,6 +223,8 @@ fun.conf.templates = {
     companyRow: fun.utils.format('%s/companyRow.html', fun.conf.html),
     companyListItem: fun.utils.format('%s/companyListItem.html', fun.conf.html),
     help: fun.utils.format('%s/help.html', fun.conf.html),
+    risk: fun.utils.format('%s/risk.html', fun.conf.html),
+    trader: fun.utils.format('%s/trader.html', fun.conf.html),
     security: fun.utils.format('%s/security.html', fun.conf.html),
     terms: fun.utils.format('%s/terms.html', fun.conf.html),
     privacy: fun.utils.format('%s/privacy.html', fun.conf.html),
@@ -315,7 +317,8 @@ fun.conf.hash = {
     elite: '#elite',
     categorizer: '#categorizer',
     forums: '#forums',
-
+    trader: '#trader'
+    risk: '#risk',
 
     terms: '#terms',
     privacy: '#privacy',

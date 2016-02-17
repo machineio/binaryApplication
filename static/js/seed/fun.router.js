@@ -46,7 +46,9 @@ fun.Router = Backbone.Router.extend({
         "deposit": "deposit",
         "withdraw": "withdraw",
         "redeem":"redeem",
-        "purshace":"purchase",
+        "purchase":"purchase",
+        "risk":"risk",
+        "trader":"trader",
         "begginer":"begginer",
         "intermediate":"intermediate",
         "expert":"expert",
@@ -198,7 +200,14 @@ fun.Router = Backbone.Router.extend({
         fun.instances.categorizer = new fun.views.categorizer({
             el:"#fun-categorizer"
         });
-
+        // risk
+        fun.instances.risk = new fun.views.risk({
+            el:"#fun-risk"
+        });
+        // trader
+        fun.instances.trader = new fun.views.trader({
+            el:"#fun-trader"
+        });
         // reports
         fun.instances.reports = new fun.views.reports({
             el:"#fun-reports"
@@ -358,6 +367,28 @@ fun.Router = Backbone.Router.extend({
         fun.instances.navbar.render();
         fun.instances.subheader.render(categorizer);
         fun.instances.categorizer.render();
+        fun.instances.footer.render();
+    },
+
+    risk: function(){
+        'use strict';
+        var risk = translate('risk');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(risk);
+        fun.instances.risk.render();
+        fun.instances.footer.render();
+    },
+
+    trader: function(){
+        'use strict';
+        var trader = translate('trader');
+        fun.utils.hideAll();
+        fun.utils.hideLanding();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(trader);
+        fun.instances.trader.render();
         fun.instances.footer.render();
     },
 
