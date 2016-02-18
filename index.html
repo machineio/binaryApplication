@@ -20,12 +20,7 @@
 <link rel="stylesheet" href="./static/css/bootstrap.min.css">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<!-- Ionicons -->
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- Theme style -->
-<link rel="stylesheet" href="./static/css/AdminLTE.min.css">
 
-<link rel="stylesheet" href="./static/css/chart.css">
 
 <link rel="stylesheet" href="./static/css/jquery.countdown.css">
 
@@ -252,81 +247,5 @@
     <script src="/static/js/views/footer.js"></script>
     <!-- fun router -->
     <script src="/static/js/seed/fun.router.js"></script>
-
-    <script type="text/javascript">
-          jQuery(document).ready(function($){     
-          // Portfolio Isotope
-          var container = $('#portfolio-wrap'); 
-          
-
-          container.isotope({
-            animationEngine : 'best-available',
-              animationOptions: {
-                duration: 200,
-                queue: false
-              },
-            layoutMode: 'fitRows'
-          }); 
-
-          $('#filters a').click(function(){
-            $('#filters a').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-              container.isotope({ filter: selector });
-                setProjects();    
-              return false;
-          });
-          
-          
-          function splitColumns() { 
-            var winWidth = $(window).width(), 
-              columnNumb = 1;
-            
-            
-            if (winWidth > 1024) {
-              columnNumb = 4;
-            } else if (winWidth > 900) {
-              columnNumb = 2;
-            } else if (winWidth > 479) {
-              columnNumb = 2;
-            } else if (winWidth < 479) {
-              columnNumb = 1;
-            }
-            
-            return columnNumb;
-          }   
-          
-          function setColumns() { 
-            var winWidth = $(window).width(), 
-              columnNumb = splitColumns(), 
-              postWidth = Math.floor(winWidth / columnNumb);
-            
-            container.find('.portfolio-item').each(function () { 
-              $(this).css( { 
-                width : postWidth + 'px' 
-              });
-            });
-          }   
-          
-          function setProjects() { 
-            setColumns();
-            container.isotope('reLayout');
-          }   
-          
-          container.imagesLoaded(function () { 
-            setColumns();
-          });
-          
-        
-          $(window).bind('resize', function () { 
-            setProjects();      
-          });
-
-        });
-      $( window ).load(function() {
-        jQuery('#all').click();
-        return false;
-      });
-    </script>
 </body>
 </html>
