@@ -106,7 +106,7 @@
 }
 
 #margin-machine-bottom {
-    margin-bottom: 40px;
+    margin-bottom: 103px;
 }
 
 #background-color-footer {
@@ -143,8 +143,27 @@
         margin-bottom: 42px;
 }
 
-#color-profile .list-group .ist-group-item .fa-sort-asc {
+#color-profile .list-group .list-group-item .fa-sort-asc{
     color: #587d38;
 }
-    
+
+#color-profile2 .panel-default .list-group .list-group-item .fa-sort-desc{
+    color: #a11e21;
+}
+
+.margin-education{
+    margin-bottom: 40px;
+}
+
+.margin-binary{
+    margin-top: 30px;
+    margin-bottom: 110px;
+}
+
+.margin-profile{
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+}
+
     
