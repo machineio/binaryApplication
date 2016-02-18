@@ -372,7 +372,7 @@ fun.Router = Backbone.Router.extend({
 
     risk: function(){
         'use strict';
-        var risk = translate('risk');
+        var risk = translate('marketRiskAnalyst');
         fun.utils.hideAll();
         fun.utils.hideLanding();
         fun.instances.navbar.render();

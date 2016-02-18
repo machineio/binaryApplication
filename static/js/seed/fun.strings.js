@@ -15,6 +15,7 @@ fun.strings = {
     chart: "Chart",
     taskMonitor: "Task Monitor",
     developers: "Developers",
+    marketRiskAnalyst: "Market Risk Analysis",
     companyName: "Company Name",
     hotAssets: "Hot Assets",
     assets: "Assets",
