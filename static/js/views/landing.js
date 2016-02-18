@@ -43,9 +43,9 @@ fun.views.landing = Backbone.View.extend({
             this.landingChart.html(templateChart);
             */
         }
+        this.$el.removeClass("hide").addClass("show");
         // clean charts
         Charts.line('#machine-landing-chart', data);
-        this.$el.removeClass("hide").addClass("show");
     },
 
     signup: function(event){
