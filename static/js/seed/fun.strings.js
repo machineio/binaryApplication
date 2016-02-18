@@ -11,6 +11,8 @@ fun.strings = {
     investment: "Investment",
     potentialPayout: "Potential Payout",
     put: "Put",
+    direction: "Direction",
+    entryTime: "Entry Time",
     rate: "Rate",
     chart: "Chart",
     taskMonitor: "Task Monitor",
