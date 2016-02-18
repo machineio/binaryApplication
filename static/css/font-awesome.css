@@ -797,12 +797,12 @@ i{
 .fa-sort-down:before,
 .fa-sort-desc:before {
   content: "\f0dd";
-  color: #587d38;
+  color: #a11e21;
 }
 .fa-sort-up:before,
 .fa-sort-asc:before {
   content: "\f0de";
-  color: #a11e21;
+  color: #587d38;
 }
 .fa-envelope:before {
   content: "\f0e0";
