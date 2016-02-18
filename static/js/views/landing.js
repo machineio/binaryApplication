@@ -35,15 +35,16 @@ fun.views.landing = Backbone.View.extend({
             this.email = this.$('#landing_email');
             this.password = this.$('#landing_password');
 
-            templateChart = _.template(
+            /*templateChart = _.template(
                 fun.utils.getTemplate(fun.conf.templates.landingChart)
             )(data);
 
             this.landingChart = this.$('#machine-landing-chart');
             this.landingChart.html(templateChart);
+            */
         }
         // clean charts
-        Charts.line('#machine-landing-chart', data);
+        //Charts.line('#machine-landing-chart', data);
         this.$el.removeClass("hide").addClass("show");
     },
 
