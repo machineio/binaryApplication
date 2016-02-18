@@ -44,7 +44,7 @@ fun.views.landing = Backbone.View.extend({
             */
         }
         // clean charts
-        //Charts.line('#machine-landing-chart', data);
+        Charts.line('#machine-landing-chart', data);
         this.$el.removeClass("hide").addClass("show");
     },
 
