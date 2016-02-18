@@ -180,4 +180,12 @@
     margin-top: 150px;
     margin-bottom:  80px;
 }
+
+.trade-loss{
+    background-color: #e3a18b;
+}
+
+.trade-win{
+    background-color: #acbf9e;
+}
     
