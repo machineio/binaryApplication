@@ -22,7 +22,7 @@ fun.views.landing = Backbone.View.extend({
         'use strict';
         var template,
             templateChart,
-            data;
+            data = [];
         if (!this.$el.html()){
             template = _.template(fun.utils.getTemplate(fun.conf.templates.landing));
             this.$el.html(template);
