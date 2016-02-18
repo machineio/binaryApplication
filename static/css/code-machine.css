@@ -138,5 +138,13 @@
 #landing_password-error{
     color: #c52127;
 }
+
+.margin-education{
+        margin-bottom: 42px;
+}
+
+#color-profile .list-group .ist-group-item .fa-sort-asc {
+    color: #587d38;
+}
     
     
