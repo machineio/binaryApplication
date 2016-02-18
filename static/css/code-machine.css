@@ -143,11 +143,16 @@
         margin-bottom: 42px;
 }
 
-#color-profile .list-group .list-group-item .fa-sort-asc {
+#color-profile .list-group .list-group-item .fa-sort-asc{
     color: #587d38;
 }
 
-#color-profile2 .panel-default .list-group .list-group-item .fa-sort-desc {
+#color-profile2 .panel-default .list-group .list-group-item .fa-sort-desc{
     color: #a11e21;
-}  
+}
+
+.margin-education{
+    margin-bottom: 40px;
+}
+
     
