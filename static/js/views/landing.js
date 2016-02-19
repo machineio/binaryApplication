@@ -50,7 +50,7 @@ fun.views.landing = Backbone.View.extend({
     renderTickGraph: function(){
         'use strict';
         var ws = new WebSocket("ws://" + location.host + "/ws/alerts"),
-            placeholder = $('#machine-landing-chart'),
+            //placeholder = $('#machine-landing-chart'),
             datalen = 100,
             plot = null,
             series,
@@ -101,7 +101,7 @@ fun.views.landing = Backbone.View.extend({
                         plot.setupGrid();
                         plot.draw();
                     } else { // if(series.data.length > 10)
-                        plot = $.plot(placeholder, [series], {
+                        plot = $.plot($('#machine-landing-chart'), [series], {
                             xaxis:{
                                 mode: "time",
                                 timeformat: "%H:%M:%S",
