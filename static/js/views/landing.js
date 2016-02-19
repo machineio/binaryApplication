@@ -50,7 +50,7 @@ fun.views.landing = Backbone.View.extend({
     renderTickGraph: function(){
         'use strict';
         var ws = new WebSocket("ws://" + location.host + "/ws/alerts"),
-            placeholder = $('#binary_first_trade'),
+            placeholder = $('#machine-landing-chart'),
             datalen = 100,
             plot = null,
             series,
