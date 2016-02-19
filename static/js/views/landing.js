@@ -85,12 +85,12 @@ fun.views.landing = Backbone.View.extend({
 
             if ("instrument" in message){
 
-                firstElement = document.getElementById("profile_first_asset");
+                firstElement = document.getElementById("landing_first_asset");
                 firstAsset = firstElement.options[firstElement.selectedIndex].value;
 
                 if (firstAsset === message['instrument']){
 
-                    $('#ws-tick-feed').html(message.bid);
+                    $('#landing-tick-feed').html(message.bid);
 
                     series.data.push([moment.unix(Number(message.time)).format('x'), message.bid]);
                     while (series.data.length > datalen) {
