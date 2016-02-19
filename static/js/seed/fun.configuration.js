@@ -171,7 +171,7 @@ fun.conf.templates = {
 
     purchase: fun.utils.format('%s/purchase.html', fun.conf.html),
     redeem: fun.utils.format('%s/redeem.html', fun.conf.html),
-    begginer: fun.utils.format('%s/begginer.html', fun.conf.html),
+    beginner: fun.utils.format('%s/beginner.html', fun.conf.html),
     intermediate: fun.utils.format('%s/intermediate.html', fun.conf.html),
     expert: fun.utils.format('%s/expert.html', fun.conf.html),
     elite: fun.utils.format('%s/elite.html', fun.conf.html),
@@ -312,7 +312,7 @@ fun.conf.hash = {
 
     redeem: '#redeem',
     purchase: '#purchase',
-    begginer: '#begginer',
+    beginner: '#beginner',
     intermediate: '#intermediate',
     expert: '#expert',
     elite: '#elite',

@@ -49,7 +49,7 @@ fun.Router = Backbone.Router.extend({
         "purchase":"purchase",
         "risk":"risk",
         "trader":"trader",
-        "begginer":"begginer",
+        "beginner":"beginner",
         "intermediate":"intermediate",
         "expert":"expert",
         "elite":"elite",
@@ -180,9 +180,9 @@ fun.Router = Backbone.Router.extend({
         fun.instances.purchase = new fun.views.purchase({
             el:"#fun-purchase"
         });
-        // begginer
-        fun.instances.begginer = new fun.views.begginer({
-            el:"#fun-begginer"
+        // beginner
+        fun.instances.beginner = new fun.views.beginner({
+            el:"#fun-beginner"
         });
         // intermediate
         fun.instances.intermediate = new fun.views.intermediate({
@@ -326,14 +326,14 @@ fun.Router = Backbone.Router.extend({
         fun.instances.footer.render();
     },
 
-    begginer: function(){
+    beginner: function(){
         'use strict';
-        var begginer = translate('begginer');
+        var beginner = translate('beginner');
         fun.utils.hideAll();
         fun.utils.hideLanding();
         fun.instances.navbar.render();
-        fun.instances.subheader.render(begginer);
-        fun.instances.begginer.render();
+        fun.instances.subheader.render(beginner);
+        fun.instances.beginner.render();
         fun.instances.footer.render();
     },
 
