@@ -11,12 +11,6 @@
         </ul>
     </li>
     <li>
-        <a href="#messages" title="<%= translate("Messages") %>">
-            <i class="fa fa-envelope fa-fw"></i>
-            <%= translate("Messages") %>
-        </a>
-    </li>
-    <li>
         <a data-toggle="dropdown" class="dropdown-toggle">
             <span data-label-placement=""><i class="fa fa-user fa-fw"></i> <%= account %></span>
         </a>
@@ -25,6 +19,12 @@
                 <input type="radio" id="current_account_0" name="current_account" value="0"><label for="current_account_0"><i class="fa fa-user fa-fw"></i><%= account %></label>
             </li>
             <li class="divider"></li>
+            <li>
+                <a href="#messages" title="<%= translate("Messages") %>">
+                    <i class="fa fa-envelope fa-fw"></i>
+                    <%= translate("Messages") %>
+                </a>
+            </li>
             <li>
                 <a href="#reports" title="<%= translate("Reports") %>">
                     <i class="fa fa-pie-chart fa-fw"></i>
