@@ -1,0 +1,40 @@
+.about-text-justified {
+  text-align: justify;
+}
+
+.about-content {
+    margin: 20px 0px;
+}
+
+.right-content-content-deep {
+	font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.feature-about-deepmachine {
+    background: #333333;
+    padding: 50px 0px;
+}
+
+
+.content-about-deepmachine {
+	color: #ffffff;
+}
+
+.idea1-div {
+    background: #333333;
+    padding-bottom: 150px;
+    padding-top: 65px;
+}
+
+.idea2-div {
+    background: #F1F1F1;
+    padding-bottom: 150px;
+    padding-top: 65px;
+}
+
+.list-content-about-deep {
+    font-size: 13px;
+}
