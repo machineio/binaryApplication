@@ -432,7 +432,6 @@ fun.Router = Backbone.Router.extend({
         );
 
         resources = {
-            
             user: new fun.models.User({'account':account}),
             tasks: new fun.models.Tasks(),
             now: new fun.models.TasksNow(),
