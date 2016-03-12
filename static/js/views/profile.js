@@ -156,6 +156,8 @@ fun.views.profile = Backbone.View.extend({
 
             data = $.parseJSON(event.data);
 
+            console.log('que me ice');
+
             message = data['message'];
 
             if ("instrument" in message){
