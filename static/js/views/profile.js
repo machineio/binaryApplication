@@ -43,6 +43,11 @@ fun.views.profile = Backbone.View.extend({
         this.amount = this.$('#profile_first_amount');
         
         //this.renderBinaryGraph();
+
+
+        show-expiry-time
+        
+
         this.renderTickGraph();       
     },
 
