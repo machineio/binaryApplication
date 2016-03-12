@@ -43,11 +43,7 @@ fun.views.profile = Backbone.View.extend({
         this.amount = this.$('#profile_first_amount');
         
         //this.renderBinaryGraph();
-        this.renderTickGraph();
-
-        $('#clock').countdown('2020/10/10', function(event) {
-            $(this).html(event.strftime('%H:%M:%S'));
-        });       
+        this.renderTickGraph();       
     },
 
     renderTimeLineChart: function(summary){
